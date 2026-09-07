@@ -1,0 +1,331 @@
+[
+ {
+  "course_code": "CS 2110",
+  "scheme": "weighted",
+  "total_points": null,
+  "groups": [
+   {
+    "name": "Exams",
+    "weight": 76.0,
+    "expected_count": 5,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500101
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Homework",
+    "weight": 14.0,
+    "expected_count": 11,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500102
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Labs",
+    "weight": 10.0,
+    "expected_count": 10,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500103
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Pop Quizzes",
+    "weight": 3.0,
+    "expected_count": null,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500104
+    ],
+    "is_bonus": true,
+    "note": ""
+   }
+  ],
+  "letter_cutoffs": {
+   "A": 90.0,
+   "B": 80.0,
+   "C": 70.0,
+   "D": 60.0
+  },
+  "rounding": "nearest_int",
+  "max_percent": 103.0,
+  "late_policy": "Homework is accepted up to 48 hours late for 80% credit.",
+  "notes": [
+   "Four midterms and a final, weighted equally at 15.2% each.",
+   "Rounds to the nearest integer: 89.5 is an A, 89.49 is a B.",
+   "Pop quizzes are bonus and cannot lower your grade."
+  ],
+  "source": "syllabus",
+  "confidence": 0.95
+ },
+ {
+  "course_code": "CS 3600",
+  "scheme": "weighted",
+  "total_points": null,
+  "groups": [
+   {
+    "name": "Projects",
+    "weight": 45.0,
+    "expected_count": 4,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500138
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Exams",
+    "weight": 40.0,
+    "expected_count": 2,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500139
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Homework",
+    "weight": 15.0,
+    "expected_count": 7,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500140
+    ],
+    "is_bonus": false,
+    "note": ""
+   }
+  ],
+  "letter_cutoffs": {
+   "A": 90.0,
+   "B": 80.0,
+   "C": 70.0,
+   "D": 60.0
+  },
+  "rounding": "none",
+  "max_percent": null,
+  "late_policy": "Five late days for the semester, at most three on one project.",
+  "notes": [
+   "Canvas is configured correctly for this course."
+  ],
+  "source": "syllabus",
+  "confidence": 0.95
+ },
+ {
+  "course_code": "MATH 2551",
+  "scheme": "points",
+  "total_points": 500,
+  "groups": [
+   {
+    "name": "Quizzes",
+    "weight": 0.0,
+    "expected_count": 8,
+    "drop_lowest": 1,
+    "canvas_group_ids": [
+     500155
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Midterms",
+    "weight": 0.0,
+    "expected_count": 3,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500156
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Final Exam",
+    "weight": 0.0,
+    "expected_count": null,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500157
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "WebAssign",
+    "weight": 0.0,
+    "expected_count": 8,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500158
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Extra Credit",
+    "weight": 0.0,
+    "expected_count": null,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500159
+    ],
+    "is_bonus": true,
+    "note": ""
+   }
+  ],
+  "letter_cutoffs": {
+   "A": 90.0,
+   "B": 80.0,
+   "C": 70.0,
+   "D": 60.0
+  },
+  "rounding": "none",
+  "max_percent": null,
+  "late_policy": "WebAssign closes at the deadline. No extensions.",
+  "notes": [
+   "Graded out of 500 raw points, not percentages. The A starts at 450.",
+   "The lowest quiz is dropped."
+  ],
+  "source": "syllabus",
+  "confidence": 0.95
+ },
+ {
+  "course_code": "PHYS 2211",
+  "scheme": "weighted",
+  "total_points": null,
+  "groups": [
+   {
+    "name": "Quizzes",
+    "weight": 20.0,
+    "expected_count": 10,
+    "drop_lowest": 2,
+    "canvas_group_ids": [
+     500182
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Tests",
+    "weight": 50.0,
+    "expected_count": 4,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500183
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Lab",
+    "weight": 20.0,
+    "expected_count": 11,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500184
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Homework",
+    "weight": 10.0,
+    "expected_count": 11,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500185
+    ],
+    "is_bonus": false,
+    "note": ""
+   }
+  ],
+  "letter_cutoffs": {
+   "A": 90.0,
+   "B": 80.0,
+   "C": 70.0,
+   "D": 60.0
+  },
+  "rounding": "none",
+  "max_percent": null,
+  "late_policy": "Labs lose 10% per day.",
+  "notes": [
+   "The two lowest quizzes are dropped.",
+   "The final replaces your lowest test if it is higher."
+  ],
+  "source": "syllabus",
+  "confidence": 0.95
+ },
+ {
+  "course_code": "ENGL 1102",
+  "scheme": "weighted",
+  "total_points": null,
+  "groups": [
+   {
+    "name": "Essays",
+    "weight": 60.0,
+    "expected_count": 3,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500223
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Participation",
+    "weight": 15.0,
+    "expected_count": 12,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500224
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Peer Review",
+    "weight": 10.0,
+    "expected_count": 3,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500225
+    ],
+    "is_bonus": false,
+    "note": ""
+   },
+   {
+    "name": "Portfolio",
+    "weight": 15.0,
+    "expected_count": 1,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     500226
+    ],
+    "is_bonus": false,
+    "note": ""
+   }
+  ],
+  "letter_cutoffs": {
+   "A": 90.0,
+   "B": 80.0,
+   "C": 70.0,
+   "D": 60.0
+  },
+  "rounding": "none",
+  "max_percent": null,
+  "late_policy": "Essays lose one letter grade per day.",
+  "notes": [
+   "Participation is graded on completion."
+  ],
+  "source": "syllabus",
+  "confidence": 0.95
+ }
+]

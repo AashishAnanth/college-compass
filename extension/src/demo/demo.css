@@ -1,0 +1,78 @@
+/* Demo-page chrome. The app's own styles are unchanged; these only cover the
+   landing, the scenario switcher and the engineering notes. */
+
+.landing { padding-bottom: 1rem; }
+.landing .mast { margin-bottom: 3rem; }
+
+.ghlink {
+  margin-left: auto; font-size: .8125rem; color: var(--pine);
+  text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 1px;
+}
+.ghlink:hover { border-bottom-color: var(--pine); }
+.ghlink:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
+
+.thesis.hero { font-size: clamp(2rem, 5.5vw, 3rem); margin-bottom: 1.25rem; }
+.standfirst.tight { margin-bottom: 1rem; }
+
+/* the three-number proof */
+.proof {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  margin: 2.5rem 0 3rem; padding: 1.75rem 0;
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.pcol { display: flex; flex-direction: column; gap: .3rem; }
+.plabel {
+  font-size: .6875rem; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--faint);
+}
+.pbig {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 1.75rem;
+  font-variant-numeric: tabular-nums; color: var(--ink); line-height: 1.2;
+}
+.psub { font-size: 1rem; color: var(--faint); }
+.pcol.accent .pbig { color: var(--pine); }
+.pnote { font-size: .8125rem; color: var(--soft); }
+@media (max-width: 40rem) {
+  .proof { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+
+/* scenario switcher */
+.scenarios { margin: 0 0 2.5rem; }
+.srow { display: flex; gap: .4rem; flex-wrap: wrap; }
+.sbtn {
+  font: inherit; font-size: .8125rem; cursor: pointer; padding: .45rem .9rem;
+  background: transparent; color: var(--soft);
+  border: 1px solid var(--rule); border-radius: 3px;
+}
+.sbtn:hover { color: var(--ink); border-color: var(--faint); }
+.sbtn.on {
+  background: var(--pine-bg); color: var(--pine); border-color: var(--pine-bg);
+  font-weight: 500;
+}
+.sbtn:focus-visible { outline: 2px solid var(--pine); outline-offset: 2px; }
+.sblurb { margin: .8rem 0 0; font-size: .9375rem; color: var(--soft); }
+
+/* engineering notes */
+.how { padding-top: 1rem; padding-bottom: 5rem; }
+.hgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem 2.5rem; }
+@media (max-width: 46rem) { .hgrid { grid-template-columns: 1fr; } }
+.hcell h3 {
+  font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 1.0625rem;
+  margin: 0 0 .5rem; color: var(--ink);
+}
+.hcell p { margin: 0; font-size: .9375rem; color: var(--soft); }
+.hcell b { color: var(--ink); font-weight: 500; }
+
+.fine {
+  margin: 2.5rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+  font-size: .8125rem; color: var(--faint); line-height: 1.7;
+}
+
+.cta { display: flex; align-items: center; gap: 1.25rem; margin-top: 2.5rem; flex-wrap: wrap; }
+.btn {
+  font-size: .875rem; text-decoration: none; padding: .6rem 1.15rem;
+  background: var(--pine); color: var(--paper); border-radius: 3px;
+}
+.btn:hover { opacity: .9; }
+.btn:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
+.ctanote { font-size: .8125rem; color: var(--faint); }

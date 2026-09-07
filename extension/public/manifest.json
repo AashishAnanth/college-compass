@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "College Compass",
+  "version": "0.1.0",
+  "description": "What your Canvas grade actually means, and what you can afford to let up on.",
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["https://*.instructure.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "College Compass" },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" }
+}

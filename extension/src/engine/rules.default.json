@@ -1,0 +1,60 @@
+[
+ {
+  "course_code": "CS 1234",
+  "scheme": "weighted",
+  "source": "syllabus",
+  "confidence": 1.0,
+  "groups": [
+   {
+    "name": "Exams",
+    "weight": 60.0,
+    "expected_count": 3,
+    "drop_lowest": 0,
+    "canvas_group_ids": [
+     123456
+    ],
+    "note": "Two midterms and a final, weighted equally."
+   },
+   {
+    "name": "Projects",
+    "weight": 30.0,
+    "expected_count": 4,
+    "canvas_group_ids": [
+     123457
+    ]
+   },
+   {
+    "name": "Homework",
+    "weight": 10.0,
+    "expected_count": 10,
+    "drop_lowest": 2,
+    "canvas_group_ids": [
+     123458
+    ],
+    "note": "The two lowest are dropped, but only once all ten exist."
+   },
+   {
+    "name": "Participation",
+    "weight": 2.0,
+    "is_bonus": true,
+    "canvas_group_ids": [
+     123459
+    ],
+    "note": "Bonus only. Can raise the grade, never lower it."
+   }
+  ],
+  "letter_cutoffs": {
+   "A": 90.0,
+   "B": 80.0,
+   "C": 70.0,
+   "D": 60.0
+  },
+  "rounding": "nearest_int",
+  "max_percent": 102.0,
+  "late_policy": "10% per day, nothing accepted after 72 hours.",
+  "notes": [
+   "Rounds to the nearest integer, so 89.5 is an A and 89.49 is a B.",
+   "canvas_group_ids come from /api/v1/courses/<id>/assignment_groups."
+  ]
+ }
+]

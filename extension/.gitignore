@@ -1,0 +1,6 @@
+node_modules/
+dist/
+build/
+
+# Generated from your gitignored personal rules; see scripts/sync-rules.js
+src/engine/rules.json

@@ -1,0 +1,3 @@
+# The engine, tests, report and web build use only the standard library.
+# This is needed for engine/extract.py alone.
+anthropic>=0.40

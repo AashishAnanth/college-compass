@@ -1,0 +1,4205 @@
+{
+ "collected_at": "2026-08-28T09:48:00Z",
+ "host": "https://canvas.example.edu",
+ "term": 239,
+ "collector_version": 2,
+ "courses": [
+  {
+   "id": 500100,
+   "name": "Computer Organization & Programming - CS-2110-A",
+   "course_code": "CS-2110-A",
+   "apply_assignment_group_weights": false,
+   "syllabus_body": null,
+   "syllabus_pages": [],
+   "syllabus_files": [],
+   "assignment_groups": [
+    {
+     "id": 500101,
+     "name": "Exams",
+     "group_weight": 0,
+     "position": 1,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500105,
+       "name": "Exam 1",
+       "assignment_group_id": 500101,
+       "points_possible": 100,
+       "due_at": "2026-09-21T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500106,
+       "name": "Exam 2",
+       "assignment_group_id": 500101,
+       "points_possible": 100,
+       "due_at": "2026-10-12T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500107,
+       "name": "Exam 3",
+       "assignment_group_id": 500101,
+       "points_possible": 100,
+       "due_at": "2026-11-02T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500108,
+       "name": "Exam 4",
+       "assignment_group_id": 500101,
+       "points_possible": 100,
+       "due_at": "2026-11-23T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500109,
+       "name": "Final Exam",
+       "assignment_group_id": 500101,
+       "points_possible": 100,
+       "due_at": "2026-11-30T14:20:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500102,
+     "name": "Homework",
+     "group_weight": 0,
+     "position": 2,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500110,
+       "name": "Homework 01",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-08-27T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500111,
+       "name": "Homework 02",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-09-03T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500112,
+       "name": "Homework 03",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-09-10T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500113,
+       "name": "Homework 04",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-09-17T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500114,
+       "name": "Homework 05",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-09-24T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500115,
+       "name": "Homework 06",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-10-01T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500116,
+       "name": "Homework 07",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-10-08T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500117,
+       "name": "Homework 08",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-10-15T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500118,
+       "name": "Homework 09",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-10-22T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500119,
+       "name": "Homework 10",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-10-29T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500120,
+       "name": "Homework 11",
+       "assignment_group_id": 500102,
+       "points_possible": 20,
+       "due_at": "2026-11-05T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500103,
+     "name": "Labs",
+     "group_weight": 0,
+     "position": 3,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500121,
+       "name": "Lab 01",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-08-31T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500122,
+       "name": "Lab 02",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-09-07T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500123,
+       "name": "Lab 03",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-09-14T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500124,
+       "name": "Lab 04",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-09-21T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500125,
+       "name": "Lab 05",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-09-28T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500126,
+       "name": "Lab 06",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-10-05T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500127,
+       "name": "Lab 07",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-10-12T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500128,
+       "name": "Lab 08",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-10-19T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500129,
+       "name": "Lab 09",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-10-26T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500130,
+       "name": "Lab 10",
+       "assignment_group_id": 500103,
+       "points_possible": 10,
+       "due_at": "2026-11-02T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500104,
+     "name": "Pop Quizzes",
+     "group_weight": 0,
+     "position": 4,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500131,
+       "name": "Pop Quiz 1",
+       "assignment_group_id": 500104,
+       "points_possible": 5,
+       "due_at": "2026-09-07T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500132,
+       "name": "Pop Quiz 2",
+       "assignment_group_id": 500104,
+       "points_possible": 5,
+       "due_at": "2026-09-21T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500133,
+       "name": "Pop Quiz 3",
+       "assignment_group_id": 500104,
+       "points_possible": 5,
+       "due_at": "2026-10-05T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500134,
+       "name": "Pop Quiz 4",
+       "assignment_group_id": 500104,
+       "points_possible": 5,
+       "due_at": "2026-10-19T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500135,
+       "name": "Pop Quiz 5",
+       "assignment_group_id": 500104,
+       "points_possible": 5,
+       "due_at": "2026-11-02T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500136,
+       "name": "Pop Quiz 6",
+       "assignment_group_id": 500104,
+       "points_possible": 5,
+       "due_at": "2026-11-16T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      }
+     ]
+    }
+   ],
+   "assignments": [
+    {
+     "id": 500105,
+     "name": "Exam 1",
+     "assignment_group_id": 500101,
+     "points_possible": 100,
+     "due_at": "2026-09-21T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500106,
+     "name": "Exam 2",
+     "assignment_group_id": 500101,
+     "points_possible": 100,
+     "due_at": "2026-10-12T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500107,
+     "name": "Exam 3",
+     "assignment_group_id": 500101,
+     "points_possible": 100,
+     "due_at": "2026-11-02T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500108,
+     "name": "Exam 4",
+     "assignment_group_id": 500101,
+     "points_possible": 100,
+     "due_at": "2026-11-23T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500109,
+     "name": "Final Exam",
+     "assignment_group_id": 500101,
+     "points_possible": 100,
+     "due_at": "2026-11-30T14:20:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500110,
+     "name": "Homework 01",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-08-27T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500111,
+     "name": "Homework 02",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-09-03T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500112,
+     "name": "Homework 03",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-09-10T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500113,
+     "name": "Homework 04",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-09-17T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500114,
+     "name": "Homework 05",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-09-24T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500115,
+     "name": "Homework 06",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-10-01T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500116,
+     "name": "Homework 07",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-10-08T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500117,
+     "name": "Homework 08",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-10-15T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500118,
+     "name": "Homework 09",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-10-22T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500119,
+     "name": "Homework 10",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-10-29T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500120,
+     "name": "Homework 11",
+     "assignment_group_id": 500102,
+     "points_possible": 20,
+     "due_at": "2026-11-05T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500121,
+     "name": "Lab 01",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-08-31T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500122,
+     "name": "Lab 02",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-09-07T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500123,
+     "name": "Lab 03",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-09-14T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500124,
+     "name": "Lab 04",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-09-21T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500125,
+     "name": "Lab 05",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-09-28T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500126,
+     "name": "Lab 06",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-10-05T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500127,
+     "name": "Lab 07",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-10-12T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500128,
+     "name": "Lab 08",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-10-19T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500129,
+     "name": "Lab 09",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-10-26T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500130,
+     "name": "Lab 10",
+     "assignment_group_id": 500103,
+     "points_possible": 10,
+     "due_at": "2026-11-02T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500131,
+     "name": "Pop Quiz 1",
+     "assignment_group_id": 500104,
+     "points_possible": 5,
+     "due_at": "2026-09-07T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500132,
+     "name": "Pop Quiz 2",
+     "assignment_group_id": 500104,
+     "points_possible": 5,
+     "due_at": "2026-09-21T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500133,
+     "name": "Pop Quiz 3",
+     "assignment_group_id": 500104,
+     "points_possible": 5,
+     "due_at": "2026-10-05T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500134,
+     "name": "Pop Quiz 4",
+     "assignment_group_id": 500104,
+     "points_possible": 5,
+     "due_at": "2026-10-19T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500135,
+     "name": "Pop Quiz 5",
+     "assignment_group_id": 500104,
+     "points_possible": 5,
+     "due_at": "2026-11-02T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500136,
+     "name": "Pop Quiz 6",
+     "assignment_group_id": 500104,
+     "points_possible": 5,
+     "due_at": "2026-11-16T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "id": 500246,
+     "assignment_id": 500105,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500247,
+     "assignment_id": 500106,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500248,
+     "assignment_id": 500107,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500249,
+     "assignment_id": 500108,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500250,
+     "assignment_id": 500109,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500251,
+     "assignment_id": 500110,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "submitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": "2026-08-27T23:59:59Z"
+    },
+    {
+     "id": 500252,
+     "assignment_id": 500111,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500253,
+     "assignment_id": 500112,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500254,
+     "assignment_id": 500113,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500255,
+     "assignment_id": 500114,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500256,
+     "assignment_id": 500115,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500257,
+     "assignment_id": 500116,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500258,
+     "assignment_id": 500117,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500259,
+     "assignment_id": 500118,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500260,
+     "assignment_id": 500119,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500261,
+     "assignment_id": 500120,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500262,
+     "assignment_id": 500121,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500263,
+     "assignment_id": 500122,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500264,
+     "assignment_id": 500123,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500265,
+     "assignment_id": 500124,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500266,
+     "assignment_id": 500125,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500267,
+     "assignment_id": 500126,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500268,
+     "assignment_id": 500127,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500269,
+     "assignment_id": 500128,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500270,
+     "assignment_id": 500129,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500271,
+     "assignment_id": 500130,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500272,
+     "assignment_id": 500131,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500273,
+     "assignment_id": 500132,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500274,
+     "assignment_id": 500133,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500275,
+     "assignment_id": 500134,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500276,
+     "assignment_id": 500135,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500277,
+     "assignment_id": 500136,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    }
+   ],
+   "enrollments": [
+    {
+     "type": "student",
+     "role": "StudentEnrollment",
+     "enrollment_state": "active",
+     "user_id": 4408217,
+     "grades": {
+      "current_score": null,
+      "final_score": 0.0,
+      "current_grade": null,
+      "final_grade": null
+     }
+    }
+   ]
+  },
+  {
+   "id": 500137,
+   "name": "Introduction to Artificial Intelligence - CS-3600-B",
+   "course_code": "CS-3600-B",
+   "apply_assignment_group_weights": true,
+   "syllabus_body": null,
+   "syllabus_pages": [],
+   "syllabus_files": [],
+   "assignment_groups": [
+    {
+     "id": 500138,
+     "name": "Projects",
+     "group_weight": 45,
+     "position": 1,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500141,
+       "name": "Project 1: Search",
+       "assignment_group_id": 500138,
+       "points_possible": 100,
+       "due_at": "2026-09-07T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500142,
+       "name": "Project 2: Logic",
+       "assignment_group_id": 500138,
+       "points_possible": 100,
+       "due_at": "2026-09-28T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500143,
+       "name": "Project 3: Planning",
+       "assignment_group_id": 500138,
+       "points_possible": 100,
+       "due_at": "2026-10-19T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500144,
+       "name": "Project 4: Learning",
+       "assignment_group_id": 500138,
+       "points_possible": 100,
+       "due_at": "2026-11-09T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500139,
+     "name": "Exams",
+     "group_weight": 40,
+     "position": 2,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500145,
+       "name": "Midterm",
+       "assignment_group_id": 500139,
+       "points_possible": 100,
+       "due_at": "2026-10-05T13:15:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500146,
+       "name": "Final Exam",
+       "assignment_group_id": 500139,
+       "points_possible": 100,
+       "due_at": "2026-11-30T11:30:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500140,
+     "name": "Homework",
+     "group_weight": 15,
+     "position": 3,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500147,
+       "name": "HW 1",
+       "assignment_group_id": 500140,
+       "points_possible": 25,
+       "due_at": "2026-09-03T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500148,
+       "name": "HW 2",
+       "assignment_group_id": 500140,
+       "points_possible": 25,
+       "due_at": "2026-09-14T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500149,
+       "name": "HW 3",
+       "assignment_group_id": 500140,
+       "points_possible": 25,
+       "due_at": "2026-09-24T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500150,
+       "name": "HW 4",
+       "assignment_group_id": 500140,
+       "points_possible": 25,
+       "due_at": "2026-10-05T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500151,
+       "name": "HW 5",
+       "assignment_group_id": 500140,
+       "points_possible": 25,
+       "due_at": "2026-10-15T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500152,
+       "name": "HW 6",
+       "assignment_group_id": 500140,
+       "points_possible": 25,
+       "due_at": "2026-10-26T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500153,
+       "name": "HW 7",
+       "assignment_group_id": 500140,
+       "points_possible": 25,
+       "due_at": "2026-11-05T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      }
+     ]
+    }
+   ],
+   "assignments": [
+    {
+     "id": 500141,
+     "name": "Project 1: Search",
+     "assignment_group_id": 500138,
+     "points_possible": 100,
+     "due_at": "2026-09-07T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500142,
+     "name": "Project 2: Logic",
+     "assignment_group_id": 500138,
+     "points_possible": 100,
+     "due_at": "2026-09-28T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500143,
+     "name": "Project 3: Planning",
+     "assignment_group_id": 500138,
+     "points_possible": 100,
+     "due_at": "2026-10-19T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500144,
+     "name": "Project 4: Learning",
+     "assignment_group_id": 500138,
+     "points_possible": 100,
+     "due_at": "2026-11-09T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500145,
+     "name": "Midterm",
+     "assignment_group_id": 500139,
+     "points_possible": 100,
+     "due_at": "2026-10-05T13:15:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500146,
+     "name": "Final Exam",
+     "assignment_group_id": 500139,
+     "points_possible": 100,
+     "due_at": "2026-11-30T11:30:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500147,
+     "name": "HW 1",
+     "assignment_group_id": 500140,
+     "points_possible": 25,
+     "due_at": "2026-09-03T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500148,
+     "name": "HW 2",
+     "assignment_group_id": 500140,
+     "points_possible": 25,
+     "due_at": "2026-09-14T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500149,
+     "name": "HW 3",
+     "assignment_group_id": 500140,
+     "points_possible": 25,
+     "due_at": "2026-09-24T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500150,
+     "name": "HW 4",
+     "assignment_group_id": 500140,
+     "points_possible": 25,
+     "due_at": "2026-10-05T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500151,
+     "name": "HW 5",
+     "assignment_group_id": 500140,
+     "points_possible": 25,
+     "due_at": "2026-10-15T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500152,
+     "name": "HW 6",
+     "assignment_group_id": 500140,
+     "points_possible": 25,
+     "due_at": "2026-10-26T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500153,
+     "name": "HW 7",
+     "assignment_group_id": 500140,
+     "points_possible": 25,
+     "due_at": "2026-11-05T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "id": 500278,
+     "assignment_id": 500141,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500279,
+     "assignment_id": 500142,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500280,
+     "assignment_id": 500143,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500281,
+     "assignment_id": 500144,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500282,
+     "assignment_id": 500145,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500283,
+     "assignment_id": 500146,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500284,
+     "assignment_id": 500147,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500285,
+     "assignment_id": 500148,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500286,
+     "assignment_id": 500149,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500287,
+     "assignment_id": 500150,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500288,
+     "assignment_id": 500151,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500289,
+     "assignment_id": 500152,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500290,
+     "assignment_id": 500153,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    }
+   ],
+   "enrollments": [
+    {
+     "type": "student",
+     "role": "StudentEnrollment",
+     "enrollment_state": "active",
+     "user_id": 4408217,
+     "grades": {
+      "current_score": null,
+      "final_score": 0.0,
+      "current_grade": null,
+      "final_grade": null
+     }
+    }
+   ]
+  },
+  {
+   "id": 500154,
+   "name": "Multivariable Calculus - MATH-2551-D",
+   "course_code": "MATH-2551-D",
+   "apply_assignment_group_weights": false,
+   "syllabus_body": null,
+   "syllabus_pages": [],
+   "syllabus_files": [],
+   "assignment_groups": [
+    {
+     "id": 500155,
+     "name": "Quizzes",
+     "group_weight": 0,
+     "position": 1,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500160,
+       "name": "Quiz 1",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-09-03T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500161,
+       "name": "Quiz 2",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-09-14T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500162,
+       "name": "Quiz 3",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-09-24T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500163,
+       "name": "Quiz 4",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-10-05T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500164,
+       "name": "Quiz 5",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-10-15T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500165,
+       "name": "Quiz 6",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-10-26T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500166,
+       "name": "Quiz 7",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-11-05T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500167,
+       "name": "Quiz 8",
+       "assignment_group_id": 500155,
+       "points_possible": 15,
+       "due_at": "2026-11-16T09:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500156,
+     "name": "Midterms",
+     "group_weight": 0,
+     "position": 2,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500168,
+       "name": "Midterm 1",
+       "assignment_group_id": 500156,
+       "points_possible": 80,
+       "due_at": "2026-10-01T18:30:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500169,
+       "name": "Midterm 2",
+       "assignment_group_id": 500156,
+       "points_possible": 80,
+       "due_at": "2026-10-26T18:30:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500170,
+       "name": "Midterm 3",
+       "assignment_group_id": 500156,
+       "points_possible": 80,
+       "due_at": "2026-11-19T18:30:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500157,
+     "name": "Final Exam",
+     "group_weight": 0,
+     "position": 3,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500171,
+       "name": "Final Exam",
+       "assignment_group_id": 500157,
+       "points_possible": 100,
+       "due_at": "2026-11-30T08:00:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500158,
+     "name": "WebAssign",
+     "group_weight": 0,
+     "position": 4,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500172,
+       "name": "WebAssign Set 01",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-08-27T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500173,
+       "name": "WebAssign Set 02",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-09-03T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500174,
+       "name": "WebAssign Set 03",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-09-10T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500175,
+       "name": "WebAssign Set 04",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-09-17T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500176,
+       "name": "WebAssign Set 05",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-09-24T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500177,
+       "name": "WebAssign Set 06",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-10-01T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500178,
+       "name": "WebAssign Set 07",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-10-08T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      },
+      {
+       "id": 500179,
+       "name": "WebAssign Set 08",
+       "assignment_group_id": 500158,
+       "points_possible": 5,
+       "due_at": "2026-10-15T23:59:59Z",
+       "submission_types": [
+        "external_tool"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500159,
+     "name": "Extra Credit",
+     "group_weight": 0,
+     "position": 5,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500180,
+       "name": "Course Survey",
+       "assignment_group_id": 500159,
+       "points_possible": 5,
+       "due_at": "2026-11-23T23:59:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      }
+     ]
+    }
+   ],
+   "assignments": [
+    {
+     "id": 500160,
+     "name": "Quiz 1",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-09-03T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500161,
+     "name": "Quiz 2",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-09-14T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500162,
+     "name": "Quiz 3",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-09-24T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500163,
+     "name": "Quiz 4",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-10-05T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500164,
+     "name": "Quiz 5",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-10-15T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500165,
+     "name": "Quiz 6",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-10-26T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500166,
+     "name": "Quiz 7",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-11-05T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500167,
+     "name": "Quiz 8",
+     "assignment_group_id": 500155,
+     "points_possible": 15,
+     "due_at": "2026-11-16T09:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500168,
+     "name": "Midterm 1",
+     "assignment_group_id": 500156,
+     "points_possible": 80,
+     "due_at": "2026-10-01T18:30:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500169,
+     "name": "Midterm 2",
+     "assignment_group_id": 500156,
+     "points_possible": 80,
+     "due_at": "2026-10-26T18:30:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500170,
+     "name": "Midterm 3",
+     "assignment_group_id": 500156,
+     "points_possible": 80,
+     "due_at": "2026-11-19T18:30:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500171,
+     "name": "Final Exam",
+     "assignment_group_id": 500157,
+     "points_possible": 100,
+     "due_at": "2026-11-30T08:00:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500172,
+     "name": "WebAssign Set 01",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-08-27T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500173,
+     "name": "WebAssign Set 02",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-09-03T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500174,
+     "name": "WebAssign Set 03",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-09-10T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500175,
+     "name": "WebAssign Set 04",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-09-17T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500176,
+     "name": "WebAssign Set 05",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-09-24T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500177,
+     "name": "WebAssign Set 06",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-10-01T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500178,
+     "name": "WebAssign Set 07",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-10-08T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500179,
+     "name": "WebAssign Set 08",
+     "assignment_group_id": 500158,
+     "points_possible": 5,
+     "due_at": "2026-10-15T23:59:59Z",
+     "submission_types": [
+      "external_tool"
+     ]
+    },
+    {
+     "id": 500180,
+     "name": "Course Survey",
+     "assignment_group_id": 500159,
+     "points_possible": 5,
+     "due_at": "2026-11-23T23:59:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "id": 500291,
+     "assignment_id": 500160,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500292,
+     "assignment_id": 500161,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500293,
+     "assignment_id": 500162,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500294,
+     "assignment_id": 500163,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500295,
+     "assignment_id": 500164,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500296,
+     "assignment_id": 500165,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500297,
+     "assignment_id": 500166,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500298,
+     "assignment_id": 500167,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500299,
+     "assignment_id": 500168,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500300,
+     "assignment_id": 500169,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500301,
+     "assignment_id": 500170,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500302,
+     "assignment_id": 500171,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500303,
+     "assignment_id": 500172,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "submitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": "2026-08-27T23:59:59Z"
+    },
+    {
+     "id": 500304,
+     "assignment_id": 500173,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500305,
+     "assignment_id": 500174,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500306,
+     "assignment_id": 500175,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500307,
+     "assignment_id": 500176,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500308,
+     "assignment_id": 500177,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500309,
+     "assignment_id": 500178,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500310,
+     "assignment_id": 500179,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500311,
+     "assignment_id": 500180,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    }
+   ],
+   "enrollments": [
+    {
+     "type": "student",
+     "role": "StudentEnrollment",
+     "enrollment_state": "active",
+     "user_id": 4408217,
+     "grades": {
+      "current_score": null,
+      "final_score": 0.0,
+      "current_grade": null,
+      "final_grade": null
+     }
+    }
+   ]
+  },
+  {
+   "id": 500181,
+   "name": "Introductory Physics I - PHYS-2211-G",
+   "course_code": "PHYS-2211-G",
+   "apply_assignment_group_weights": true,
+   "syllabus_body": null,
+   "syllabus_pages": [],
+   "syllabus_files": [],
+   "assignment_groups": [
+    {
+     "id": 500182,
+     "name": "Quizzes",
+     "group_weight": 20,
+     "position": 1,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500186,
+       "name": "Quiz 01",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-08-27T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500187,
+       "name": "Quiz 02",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-09-03T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500188,
+       "name": "Quiz 03",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-09-10T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500189,
+       "name": "Quiz 04",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-09-17T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500190,
+       "name": "Quiz 05",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-09-24T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500191,
+       "name": "Quiz 06",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-10-01T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500192,
+       "name": "Quiz 07",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-10-08T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500193,
+       "name": "Quiz 08",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-10-15T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500194,
+       "name": "Quiz 09",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-10-22T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      },
+      {
+       "id": 500195,
+       "name": "Quiz 10",
+       "assignment_group_id": 500182,
+       "points_possible": 10,
+       "due_at": "2026-10-29T08:05:59Z",
+       "submission_types": [
+        "online_quiz"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500183,
+     "name": "Tests",
+     "group_weight": 50,
+     "position": 2,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500196,
+       "name": "Test 1",
+       "assignment_group_id": 500183,
+       "points_possible": 100,
+       "due_at": "2026-10-01T18:00:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500197,
+       "name": "Test 2",
+       "assignment_group_id": 500183,
+       "points_possible": 100,
+       "due_at": "2026-10-26T18:00:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500198,
+       "name": "Test 3",
+       "assignment_group_id": 500183,
+       "points_possible": 100,
+       "due_at": "2026-11-19T18:00:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      },
+      {
+       "id": 500199,
+       "name": "Final Exam",
+       "assignment_group_id": 500183,
+       "points_possible": 100,
+       "due_at": "2026-11-30T14:40:59Z",
+       "submission_types": [
+        "on_paper"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500184,
+     "name": "Lab",
+     "group_weight": 20,
+     "position": 3,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500200,
+       "name": "Lab Report 01",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-08-31T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500201,
+       "name": "Lab Report 02",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-09-07T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500202,
+       "name": "Lab Report 03",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-09-14T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500203,
+       "name": "Lab Report 04",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-09-21T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500204,
+       "name": "Lab Report 05",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-09-28T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500205,
+       "name": "Lab Report 06",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-10-05T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500206,
+       "name": "Lab Report 07",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-10-12T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500207,
+       "name": "Lab Report 08",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-10-19T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500208,
+       "name": "Lab Report 09",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-10-26T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500209,
+       "name": "Lab Report 10",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-11-02T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500210,
+       "name": "Lab Report 11",
+       "assignment_group_id": 500184,
+       "points_possible": 20,
+       "due_at": "2026-11-09T17:00:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500185,
+     "name": "Homework",
+     "group_weight": 10,
+     "position": 4,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500211,
+       "name": "WebAssign 01",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-08-27T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500212,
+       "name": "WebAssign 02",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-09-03T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500213,
+       "name": "WebAssign 03",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-09-10T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500214,
+       "name": "WebAssign 04",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-09-17T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500215,
+       "name": "WebAssign 05",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-09-24T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500216,
+       "name": "WebAssign 06",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-10-01T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500217,
+       "name": "WebAssign 07",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-10-08T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500218,
+       "name": "WebAssign 08",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-10-15T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500219,
+       "name": "WebAssign 09",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-10-22T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500220,
+       "name": "WebAssign 10",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-10-29T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500221,
+       "name": "WebAssign 11",
+       "assignment_group_id": 500185,
+       "points_possible": 10,
+       "due_at": "2026-11-05T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      }
+     ]
+    }
+   ],
+   "assignments": [
+    {
+     "id": 500186,
+     "name": "Quiz 01",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-08-27T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500187,
+     "name": "Quiz 02",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-09-03T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500188,
+     "name": "Quiz 03",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-09-10T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500189,
+     "name": "Quiz 04",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-09-17T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500190,
+     "name": "Quiz 05",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-09-24T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500191,
+     "name": "Quiz 06",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-10-01T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500192,
+     "name": "Quiz 07",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-10-08T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500193,
+     "name": "Quiz 08",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-10-15T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500194,
+     "name": "Quiz 09",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-10-22T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500195,
+     "name": "Quiz 10",
+     "assignment_group_id": 500182,
+     "points_possible": 10,
+     "due_at": "2026-10-29T08:05:59Z",
+     "submission_types": [
+      "online_quiz"
+     ]
+    },
+    {
+     "id": 500196,
+     "name": "Test 1",
+     "assignment_group_id": 500183,
+     "points_possible": 100,
+     "due_at": "2026-10-01T18:00:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500197,
+     "name": "Test 2",
+     "assignment_group_id": 500183,
+     "points_possible": 100,
+     "due_at": "2026-10-26T18:00:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500198,
+     "name": "Test 3",
+     "assignment_group_id": 500183,
+     "points_possible": 100,
+     "due_at": "2026-11-19T18:00:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500199,
+     "name": "Final Exam",
+     "assignment_group_id": 500183,
+     "points_possible": 100,
+     "due_at": "2026-11-30T14:40:59Z",
+     "submission_types": [
+      "on_paper"
+     ]
+    },
+    {
+     "id": 500200,
+     "name": "Lab Report 01",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-08-31T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500201,
+     "name": "Lab Report 02",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-09-07T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500202,
+     "name": "Lab Report 03",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-09-14T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500203,
+     "name": "Lab Report 04",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-09-21T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500204,
+     "name": "Lab Report 05",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-09-28T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500205,
+     "name": "Lab Report 06",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-10-05T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500206,
+     "name": "Lab Report 07",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-10-12T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500207,
+     "name": "Lab Report 08",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-10-19T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500208,
+     "name": "Lab Report 09",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-10-26T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500209,
+     "name": "Lab Report 10",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-11-02T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500210,
+     "name": "Lab Report 11",
+     "assignment_group_id": 500184,
+     "points_possible": 20,
+     "due_at": "2026-11-09T17:00:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500211,
+     "name": "WebAssign 01",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-08-27T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500212,
+     "name": "WebAssign 02",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-09-03T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500213,
+     "name": "WebAssign 03",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-09-10T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500214,
+     "name": "WebAssign 04",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-09-17T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500215,
+     "name": "WebAssign 05",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-09-24T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500216,
+     "name": "WebAssign 06",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-10-01T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500217,
+     "name": "WebAssign 07",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-10-08T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500218,
+     "name": "WebAssign 08",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-10-15T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500219,
+     "name": "WebAssign 09",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-10-22T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500220,
+     "name": "WebAssign 10",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-10-29T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500221,
+     "name": "WebAssign 11",
+     "assignment_group_id": 500185,
+     "points_possible": 10,
+     "due_at": "2026-11-05T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "id": 500312,
+     "assignment_id": 500186,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "submitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": "2026-08-27T08:05:59Z"
+    },
+    {
+     "id": 500313,
+     "assignment_id": 500187,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500314,
+     "assignment_id": 500188,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500315,
+     "assignment_id": 500189,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500316,
+     "assignment_id": 500190,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500317,
+     "assignment_id": 500191,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500318,
+     "assignment_id": 500192,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500319,
+     "assignment_id": 500193,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500320,
+     "assignment_id": 500194,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500321,
+     "assignment_id": 500195,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500322,
+     "assignment_id": 500196,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500323,
+     "assignment_id": 500197,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500324,
+     "assignment_id": 500198,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500325,
+     "assignment_id": 500199,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500326,
+     "assignment_id": 500200,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500327,
+     "assignment_id": 500201,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500328,
+     "assignment_id": 500202,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500329,
+     "assignment_id": 500203,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500330,
+     "assignment_id": 500204,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500331,
+     "assignment_id": 500205,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500332,
+     "assignment_id": 500206,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500333,
+     "assignment_id": 500207,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500334,
+     "assignment_id": 500208,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500335,
+     "assignment_id": 500209,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500336,
+     "assignment_id": 500210,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500337,
+     "assignment_id": 500211,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "submitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": "2026-08-27T23:59:59Z"
+    },
+    {
+     "id": 500338,
+     "assignment_id": 500212,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500339,
+     "assignment_id": 500213,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500340,
+     "assignment_id": 500214,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500341,
+     "assignment_id": 500215,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500342,
+     "assignment_id": 500216,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500343,
+     "assignment_id": 500217,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500344,
+     "assignment_id": 500218,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500345,
+     "assignment_id": 500219,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500346,
+     "assignment_id": 500220,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500347,
+     "assignment_id": 500221,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    }
+   ],
+   "enrollments": [
+    {
+     "type": "student",
+     "role": "StudentEnrollment",
+     "enrollment_state": "active",
+     "user_id": 4408217,
+     "grades": {
+      "current_score": null,
+      "final_score": 0.0,
+      "current_grade": null,
+      "final_grade": null
+     }
+    }
+   ]
+  },
+  {
+   "id": 500222,
+   "name": "English Composition II - ENGL-1102-K",
+   "course_code": "ENGL-1102-K",
+   "apply_assignment_group_weights": true,
+   "syllabus_body": null,
+   "syllabus_pages": [],
+   "syllabus_files": [],
+   "assignment_groups": [
+    {
+     "id": 500223,
+     "name": "Essays",
+     "group_weight": 60,
+     "position": 1,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500227,
+       "name": "Essay 1",
+       "assignment_group_id": 500223,
+       "points_possible": 100,
+       "due_at": "2026-09-07T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500228,
+       "name": "Essay 2",
+       "assignment_group_id": 500223,
+       "points_possible": 100,
+       "due_at": "2026-10-05T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500229,
+       "name": "Essay 3",
+       "assignment_group_id": 500223,
+       "points_possible": 100,
+       "due_at": "2026-11-02T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500224,
+     "name": "Participation",
+     "group_weight": 15,
+     "position": 2,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500230,
+       "name": "Discussion Week 1",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-08-24T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500231,
+       "name": "Discussion Week 2",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-08-31T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500232,
+       "name": "Discussion Week 3",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-09-07T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500233,
+       "name": "Discussion Week 4",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-09-14T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500234,
+       "name": "Discussion Week 5",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-09-21T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500235,
+       "name": "Discussion Week 6",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-09-28T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500236,
+       "name": "Discussion Week 7",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-10-05T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500237,
+       "name": "Discussion Week 8",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-10-12T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500238,
+       "name": "Discussion Week 9",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-10-19T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500239,
+       "name": "Discussion Week 10",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-10-26T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500240,
+       "name": "Discussion Week 11",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-11-02T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      },
+      {
+       "id": 500241,
+       "name": "Discussion Week 12",
+       "assignment_group_id": 500224,
+       "points_possible": 10,
+       "due_at": "2026-11-09T22:00:59Z",
+       "submission_types": [
+        "discussion_topic"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500225,
+     "name": "Peer Review",
+     "group_weight": 10,
+     "position": 3,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500242,
+       "name": "Peer Review 1",
+       "assignment_group_id": 500225,
+       "points_possible": 20,
+       "due_at": "2026-09-10T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500243,
+       "name": "Peer Review 2",
+       "assignment_group_id": 500225,
+       "points_possible": 20,
+       "due_at": "2026-10-08T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      },
+      {
+       "id": 500244,
+       "name": "Peer Review 3",
+       "assignment_group_id": 500225,
+       "points_possible": 20,
+       "due_at": "2026-11-05T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 500226,
+     "name": "Portfolio",
+     "group_weight": 15,
+     "position": 4,
+     "rules": {},
+     "assignments": [
+      {
+       "id": 500245,
+       "name": "Final Portfolio",
+       "assignment_group_id": 500226,
+       "points_possible": 100,
+       "due_at": "2026-11-23T23:59:59Z",
+       "submission_types": [
+        "online_upload"
+       ]
+      }
+     ]
+    }
+   ],
+   "assignments": [
+    {
+     "id": 500227,
+     "name": "Essay 1",
+     "assignment_group_id": 500223,
+     "points_possible": 100,
+     "due_at": "2026-09-07T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500228,
+     "name": "Essay 2",
+     "assignment_group_id": 500223,
+     "points_possible": 100,
+     "due_at": "2026-10-05T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500229,
+     "name": "Essay 3",
+     "assignment_group_id": 500223,
+     "points_possible": 100,
+     "due_at": "2026-11-02T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500230,
+     "name": "Discussion Week 1",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-08-24T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500231,
+     "name": "Discussion Week 2",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-08-31T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500232,
+     "name": "Discussion Week 3",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-09-07T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500233,
+     "name": "Discussion Week 4",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-09-14T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500234,
+     "name": "Discussion Week 5",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-09-21T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500235,
+     "name": "Discussion Week 6",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-09-28T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500236,
+     "name": "Discussion Week 7",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-10-05T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500237,
+     "name": "Discussion Week 8",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-10-12T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500238,
+     "name": "Discussion Week 9",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-10-19T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500239,
+     "name": "Discussion Week 10",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-10-26T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500240,
+     "name": "Discussion Week 11",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-11-02T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500241,
+     "name": "Discussion Week 12",
+     "assignment_group_id": 500224,
+     "points_possible": 10,
+     "due_at": "2026-11-09T22:00:59Z",
+     "submission_types": [
+      "discussion_topic"
+     ]
+    },
+    {
+     "id": 500242,
+     "name": "Peer Review 1",
+     "assignment_group_id": 500225,
+     "points_possible": 20,
+     "due_at": "2026-09-10T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500243,
+     "name": "Peer Review 2",
+     "assignment_group_id": 500225,
+     "points_possible": 20,
+     "due_at": "2026-10-08T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500244,
+     "name": "Peer Review 3",
+     "assignment_group_id": 500225,
+     "points_possible": 20,
+     "due_at": "2026-11-05T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    },
+    {
+     "id": 500245,
+     "name": "Final Portfolio",
+     "assignment_group_id": 500226,
+     "points_possible": 100,
+     "due_at": "2026-11-23T23:59:59Z",
+     "submission_types": [
+      "online_upload"
+     ]
+    }
+   ],
+   "submissions": [
+    {
+     "id": 500348,
+     "assignment_id": 500227,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500349,
+     "assignment_id": 500228,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500350,
+     "assignment_id": 500229,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500351,
+     "assignment_id": 500230,
+     "user_id": 4408217,
+     "score": 9.0,
+     "grade": "9.0",
+     "workflow_state": "graded",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": "2026-08-24T22:00:59Z"
+    },
+    {
+     "id": 500352,
+     "assignment_id": 500231,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500353,
+     "assignment_id": 500232,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500354,
+     "assignment_id": 500233,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500355,
+     "assignment_id": 500234,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500356,
+     "assignment_id": 500235,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500357,
+     "assignment_id": 500236,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500358,
+     "assignment_id": 500237,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500359,
+     "assignment_id": 500238,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500360,
+     "assignment_id": 500239,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500361,
+     "assignment_id": 500240,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500362,
+     "assignment_id": 500241,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500363,
+     "assignment_id": 500242,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500364,
+     "assignment_id": 500243,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500365,
+     "assignment_id": 500244,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    },
+    {
+     "id": 500366,
+     "assignment_id": 500245,
+     "user_id": 4408217,
+     "score": null,
+     "grade": null,
+     "workflow_state": "unsubmitted",
+     "excused": false,
+     "late": false,
+     "missing": false,
+     "submitted_at": null
+    }
+   ],
+   "enrollments": [
+    {
+     "type": "student",
+     "role": "StudentEnrollment",
+     "enrollment_state": "active",
+     "user_id": 4408217,
+     "grades": {
+      "current_score": 90.0,
+      "final_score": 1.55,
+      "current_grade": null,
+      "final_grade": null
+     }
+    }
+   ]
+  }
+ ]
+}

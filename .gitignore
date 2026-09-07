@@ -1,0 +1,18 @@
+# Never commit real Canvas data or secrets.
+.env
+data/
+demo/fixtures/*.local.json
+
+__pycache__/
+*.pyc
+.DS_Store
+
+node_modules/
+dist/
+dist-demo/
+build/
+.vercel/
+
+# Your own course rules name real courses and carry real Canvas group ids.
+engine/rules/*.json
+!engine/rules/example.json

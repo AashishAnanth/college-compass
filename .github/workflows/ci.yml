@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: extension/package-lock.json
+
+      - name: Regenerate demo fixtures
+        # They are committed, so this also proves the generator is deterministic.
+        run: |
+          python3 demo/make_fixtures.py
+          git diff --exit-code demo/fixtures || {
+            echo "::error::fixtures are not reproducible from make_fixtures.py"
+            exit 1
+          }
+
+      - name: Engine tests
+        run: python3 tests/test_engine.py
+
+      - name: Install extension deps
+        working-directory: extension
+        run: npm ci
+
+      - name: Typecheck
+        working-directory: extension
+        run: npm run typecheck
+
+      - name: Cross-language engine parity
+        run: |
+          cd extension && npm run build:engine && cd ..
+          python3 tests/dump_python.py > /tmp/py_engine.json
+          node tests/parity.mjs
+
+      - name: Build extension
+        working-directory: extension
+        run: npm run build
+
+      - name: Build demo
+        working-directory: extension
+        run: npm run build:demo
