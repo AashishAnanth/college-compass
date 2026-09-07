@@ -1,7 +1,7 @@
 /* Demo-page chrome. The app's own styles are unchanged; these only cover the
    landing, the scenario switcher and the engineering notes. */
 
-.landing { padding-bottom: 1rem; }
+.landing { padding-bottom: 0; }
 .landing .mast { margin-bottom: 3rem; }
 
 .ghlink {
@@ -37,10 +37,12 @@
 }
 
 /* scenario switcher */
-.scenarios { margin: 0 0 2.5rem; }
-.srow { display: flex; gap: .4rem; flex-wrap: wrap; }
+.scenarios { display: flex; align-items: center; gap: .7rem;
+             margin: 0 0 2.25rem; flex-wrap: wrap; }
+.slabel { font-size: .75rem; color: var(--faint); }
+.srow { display: flex; gap: .3rem; flex-wrap: wrap; }
 .sbtn {
-  font: inherit; font-size: .8125rem; cursor: pointer; padding: .45rem .9rem;
+  font: inherit; font-size: .75rem; cursor: pointer; padding: .45rem .9rem;
   background: transparent; color: var(--soft);
   border: 1px solid var(--rule); border-radius: 3px;
 }
@@ -83,16 +85,18 @@
   text-transform: uppercase; color: var(--faint);
 }
 .carousel {
-  margin: 0 0 1.4rem; min-height: 3.4em;
+  /* Two lines reserved so the layout does not jump between questions. */
+  margin: 0 0 1.5rem; min-height: 2.7em;
   font-family: Newsreader, Georgia, serif;
   font-size: clamp(1.25rem, 3vw, 1.7rem); line-height: 1.35;
-  font-style: italic; color: var(--soft); display: flex; gap: .1rem;
+  font-style: italic; color: var(--soft);
 }
-.qmark { color: var(--rule); font-size: 1.6em; line-height: .9; margin-right: .15rem; }
+.qmark { color: var(--rule); font-size: 1.6em; line-height: 0;
+         vertical-align: -.15em; margin-right: .1rem; }
 .qtext { color: var(--ink); }
 .caret {
-  display: inline-block; width: 2px; height: 1.05em; margin-left: 2px;
-  background: var(--pine); align-self: center;
+  display: inline-block; width: 2px; height: .95em; margin-left: 3px;
+  background: var(--pine); vertical-align: -.1em;
   animation: blink 1.05s steps(1) infinite;
 }
 .caret.still { animation: none; opacity: .35; }
@@ -124,3 +128,20 @@
                   transition: none !important; }
   .hcell:hover, .sbtn:active { transform: none; }
 }
+
+
+/* header nav + compact lede */
+.mnav { margin-left: auto; display: flex; align-items: center; gap: 1rem; }
+.mnav a { font-size: .8125rem; color: var(--soft); text-decoration: none; }
+.mnav a:hover { color: var(--ink); }
+.btn.small { padding: .4rem .85rem; font-size: .8125rem; color: var(--paper); }
+.btn.small:hover { color: var(--paper); }
+.standfirst.lede { font-size: 1.0625rem; max-width: 36rem; margin-bottom: 0; }
+.standfirst.lede b { color: var(--ink); font-weight: 500; }
+.how { padding-top: 0; padding-bottom: 4rem; }
+.how .cta { margin-top: 0; }
+.how .fine { margin-top: 1.75rem; }
+.how .fine a { color: var(--pine); }
+
+/* the tool starts right under the lede, not a screen later */
+.landing + .wrap { padding-top: 2.25rem; }

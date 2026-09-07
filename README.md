@@ -17,6 +17,24 @@ answers the question you actually have: **where does tonight go?**
 
 ---
 
+## Install the extension
+
+Not on the Chrome Web Store yet, so it is a two-minute unpacked install:
+
+```bash
+git clone https://github.com/AashishAnanth/college-compass
+cd college-compass/extension && npm install && npm run build
+```
+
+Then open `chrome://extensions`, turn on **Developer mode**, choose **Load
+unpacked**, and pick `college-compass/extension/dist`. Click the toolbar icon
+with Canvas open.
+
+It reads the Canvas tab you are already signed into — no account, no access
+token, nothing sent to a server. Grading rules for your own courses go in
+`engine/rules/` (see [the format](engine/rules/example.json)); without them it
+falls back to whatever weights Canvas has, which is often wrong or missing.
+
 ## What it answers
 
 - **What do I need on the final?** Not a category average — the actual number,
@@ -98,19 +116,13 @@ course collapsed to an F at 100% effort, because the projection only counted
 assignments Canvas had created so far and the course was two months from
 creating the rest.
 
-## Run it
+## Develop
 
 ```bash
-# tests
-python3 tests/test_engine.py
-cd extension && npm install && npm test
-
-# the extension
-cd extension && npm run build
-# then chrome://extensions -> Developer mode -> Load unpacked -> extension/dist
-
-# the demo
-cd extension && npm run build:demo && npx serve dist-demo
+python3 tests/test_engine.py          # engine assertions
+cd extension && npm test              # typecheck + cross-language parity
+npm run build                         # the extension -> dist/
+npm run build:demo                    # the web planner -> dist-demo/
 ```
 
 The engine, tests and fixture generator use only the Python standard library.

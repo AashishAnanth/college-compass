@@ -4,9 +4,18 @@ import type { CourseResult } from '../../engine/types';
 import { useCountUp, useReveal } from '../hooks/motion';
 import { Receipt } from './Receipt';
 import { WhatIf } from './WhatIf';
-import { WhatsLeft } from './WhatsLeft';
+import { WhatsLeft, type PlanControls } from './WhatsLeft';
 
-export function CourseCard({ result, index }: { result: CourseResult; index: number }) {
+export function CourseCard({ result: actual, planned, plan, index }: {
+  result: CourseResult;
+  /** The same course re-evaluated with your hypothetical scores. */
+  planned?: CourseResult;
+  plan?: PlanControls;
+  index: number;
+}) {
+  // With a plan in play every number on the card reflects it -- otherwise the
+  // headline and the projection would disagree with each other.
+  const result = planned ?? actual;
   const n = narrate(result);
   const [open, setOpen] = useState(false);
   const { ref, shown } = useReveal<HTMLElement>();
@@ -49,7 +58,20 @@ export function CourseCard({ result, index }: { result: CourseResult; index: num
         little is settled.
       </p>
 
-      <WhatsLeft result={result} />
+      {planned && (
+        <p className="plan-out">
+          With your planned scores, and the rest at your current pace, this
+          finishes at <b>{planned.on_pace.toFixed(1)}%</b>{' '}
+          <span className="lt">{planned.on_pace_letter}</span>
+          <span className="plan-delta">
+            {planned.on_pace >= actual.on_pace ? '\u25b2' : '\u25bc'}{' '}
+            {Math.abs(planned.on_pace - actual.on_pace).toFixed(1)} points versus
+            your pace without them
+          </span>
+        </p>
+      )}
+
+      <WhatsLeft result={actual} plan={plan} />
 
       <WhatIf result={result} />
 

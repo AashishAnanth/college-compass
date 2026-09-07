@@ -32,6 +32,7 @@ export function Demo() {
     standalone: false,
     banner: (
       <div className="scenarios">
+        <span className="slabel">Sample semester at</span>
         <div className="srow" role="tablist" aria-label="Point in the semester">
           {SCENARIOS.map((s) => (
             <button
@@ -43,7 +44,6 @@ export function Demo() {
             </button>
           ))}
         </div>
-        <p className="sblurb">{current.blurb}</p>
       </div>
     ),
   }), [id, current]);

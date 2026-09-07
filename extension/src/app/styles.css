@@ -291,7 +291,7 @@
   /* ── what's left ──────────────────────────────────────────────────── */
   .left { margin-top: 1.25rem; }
   .lhead, .lrow {
-    display: grid; grid-template-columns: 1fr 4.5rem 11rem; gap: 1rem;
+    display: grid; grid-template-columns: 1fr 4rem 8.5rem 7rem; gap: 1rem;
     align-items: baseline; padding: .5rem 0;
   }
   .lhead {
@@ -299,6 +299,7 @@
     color: var(--faint); border-bottom: 1px solid var(--rule); padding-bottom: .45rem;
   }
   .lhead span:nth-child(2), .lhead span:nth-child(3) { text-align: right; }
+  .lhead span:nth-child(4) { text-align: right; }
   .lrow { border-bottom: 1px solid var(--rule); transition: background-color .15s ease; }
   .lrow:last-of-type { border-bottom: none; }
   .lrow:hover { background: var(--raised); }
@@ -322,8 +323,43 @@
   .lmore:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
   .lnote { margin: .9rem 0 0; font-size: .78125rem; color: var(--faint); line-height: 1.6; }
   .lnote em { font-style: normal; color: var(--pine); }
-  @media (max-width: 34rem) {
-    .lhead, .lrow { grid-template-columns: 1fr 3.5rem; }
-    .lhead span:nth-child(3) { display: none; }
-    .lneed { grid-column: 2 / 3; text-align: right; }
+  @media (max-width: 40rem) {
+    .lhead, .lrow { grid-template-columns: 1fr 3.5rem 6.5rem; }
+    .lhead span:nth-child(3), .lneed { display: none; }
   }
+
+  /* ── planning inputs ──────────────────────────────────────────────── */
+  .lplan { display: flex; align-items: baseline; gap: .35rem; justify-content: flex-end; }
+  .pinput {
+    width: 3.4rem; font: inherit; font-family: 'IBM Plex Mono', monospace;
+    font-size: .8125rem; text-align: right; padding: .28rem .4rem;
+    color: var(--ink); background: var(--paper);
+    border: 1px solid var(--rule); border-radius: 3px;
+    transition: border-color .15s ease, background-color .15s ease;
+  }
+  .pinput::placeholder { color: var(--faint); }
+  .pinput:hover { border-color: var(--faint); }
+  .pinput:focus { outline: none; border-color: var(--pine); background: var(--raised); }
+  .pof {
+    font-family: 'IBM Plex Mono', monospace; font-size: .75rem; color: var(--faint);
+    min-width: 2.2rem;
+  }
+  .lrow.planned { background: var(--pine-bg); }
+  .lrow.planned .pinput { border-color: var(--pine); color: var(--pine); font-weight: 500; }
+
+  .plan-out {
+    margin: 1.1rem 0 0; padding: .8rem 1rem; border-radius: 3px;
+    background: var(--pine-bg); font-size: .9375rem; color: var(--ink);
+  }
+  .plan-out b { font-family: 'IBM Plex Mono', monospace; font-size: .9rem; }
+  .plan-out .lt { font-family: Newsreader, Georgia, serif; font-size: 1.1rem; color: var(--pine); }
+  .plan-delta {
+    display: block; margin-top: .2rem; font-size: .78125rem; color: var(--soft);
+  }
+
+  .planbar {
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    margin: 0 0 2rem; padding: .7rem 1rem; border-radius: 3px;
+    background: var(--pine-bg); font-size: .875rem; color: var(--ink);
+  }
+  .planbar .retry { margin: 0 0 0 auto; padding: .3rem .7rem; font-size: .78125rem; }

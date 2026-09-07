@@ -1,9 +1,10 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { evaluate } from '../engine/engine';
 import { headline } from '../engine/narrate';
 import rulesJson from '../engine/rules.json';
 import type { CourseResult, CourseRules, Dump, RawCourse } from '../engine/types';
 import { CourseCard } from './components/CourseCard';
+import { applyPlan, itemKey, loadPlan, savePlan, type Plan } from './plan';
 import { Triage } from './components/Triage';
 
 const BUNDLED_RULES = rulesJson as unknown as CourseRules[];
@@ -62,6 +63,8 @@ interface View {
   term: number;
   live: boolean;
   at: number;
+  /** The raw data, kept so plans can be re-evaluated without another fetch. */
+  dump: Dump;
 }
 
 function build(dump: Dump, live: boolean, at: number,
@@ -75,7 +78,7 @@ function build(dump: Dump, live: boolean, at: number,
   }
   if (!results.length) return null;
   results.sort((a, b) => b.settled_pct - a.settled_pct);
-  return { results, unknown, term: dump.term, live, at };
+  return { results, unknown, term: dump.term, live, at, dump };
 }
 
 type Status =
@@ -87,6 +90,22 @@ export function App({ source = chromeSource }: { source?: Source }) {
   const rules = source.rules ?? BUNDLED_RULES;
   const [view, setView] = useState<View | null>(null);
   const [status, setStatus] = useState<Status>({ kind: 'loading' });
+  const [plan, setPlan] = useState<Plan>(() => loadPlan());
+
+  useEffect(() => { savePlan(plan); }, [plan]);
+
+  // The planned grade runs through the same engine as the real one: the
+  // hypothetical scores are written into a copy of the Canvas data.
+  const planned = useMemo(() => {
+    if (!view || !Object.keys(plan).length) return null;
+    const built = build(applyPlan(view.dump, plan), view.live, view.at, rules);
+    if (!built) return null;
+    const byCode: Record<string, CourseResult> = {};
+    for (const r of built.results) byCode[r.code] = r;
+    return byCode;
+  }, [view, plan, rules]);
+
+  const planCount = Object.keys(plan).length;
 
   const load = useCallback(async () => {
     setStatus({ kind: 'loading' });
@@ -173,13 +192,44 @@ export function App({ source = chromeSource }: { source?: Source }) {
 
           {source.banner}
 
-          <Triage results={view.results} />
+          {planCount > 0 && (
+            <div className="planbar">
+              <span>
+                {planCount} planned {planCount === 1 ? 'score' : 'scores'} — every
+                number below reflects them.
+              </span>
+              <button className="retry" onClick={() => setPlan({})}>Clear plan</button>
+            </div>
+          )}
+
+          <Triage results={planned
+            ? view.results.map((r) => planned[r.code] ?? r)
+            : view.results} />
 
           <section>
             <h2>Your courses</h2>
-            {view.results.map((r, i) => (
-              <CourseCard key={r.code} result={r} index={i} />
-            ))}
+            {view.results.map((r, i) => {
+              const course = view.dump.courses.find(
+                (c) => matchRules(c, rules)?.course_code === r.code);
+              return (
+                <CourseCard
+                  key={r.code}
+                  result={r}
+                  planned={planned?.[r.code]}
+                  index={i}
+                  plan={course ? {
+                    get: (item) => plan[itemKey(course, item)],
+                    set: (item, score) => setPlan((prev) => {
+                      const next = { ...prev };
+                      const k = itemKey(course, item);
+                      if (score === null || Number.isNaN(score)) delete next[k];
+                      else next[k] = score;
+                      return next;
+                    }),
+                  } : undefined}
+                />
+              );
+            })}
           </section>
 
           <footer>
