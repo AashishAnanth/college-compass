@@ -37,6 +37,13 @@ jobs:
         working-directory: extension
         run: npm ci
 
+      # First build after a bare checkout, exactly as a deploy sees it: nothing
+      # generated yet. Runs before typecheck so a missing prebuild hook fails
+      # here instead of in production.
+      - name: Build demo from a bare checkout
+        working-directory: extension
+        run: npm run build:demo
+
       - name: Typecheck
         working-directory: extension
         run: npm run typecheck
@@ -50,7 +57,3 @@ jobs:
       - name: Build extension
         working-directory: extension
         run: npm run build
-
-      - name: Build demo
-        working-directory: extension
-        run: npm run build:demo

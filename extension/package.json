@@ -6,15 +6,16 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
-    "typecheck": "tsc --noEmit",
-    "build:engine": "tsc -p tsconfig.engine.json && node -e \"require('fs').writeFileSync('build/package.json','{\\\"type\\\":\\\"module\\\"}')\"",
-    "test": "npm run typecheck && npm run build:engine && node ../tests/parity.mjs",
     "build:demo": "DEMO=1 webpack --mode production",
     "dev:demo": "DEMO=1 webpack --mode development --watch",
+    "typecheck": "tsc --noEmit",
+    "build:engine": "tsc -p tsconfig.engine.json && node -e \"require('fs').writeFileSync('build/package.json','{\\\"type\\\":\\\"module\\\"}')\"",
     "rules": "node scripts/sync-rules.js",
     "prebuild": "npm run rules",
+    "prebuild:demo": "npm run rules",
+    "prebuild:engine": "npm run rules",
     "pretypecheck": "npm run rules",
-    "prebuild:engine": "npm run rules"
+    "test": "npm run typecheck && npm run build:engine && node ../tests/parity.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",
