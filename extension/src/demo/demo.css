@@ -11,7 +11,7 @@
 .ghlink:hover { border-bottom-color: var(--pine); }
 .ghlink:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
 
-.thesis.hero { font-size: clamp(2rem, 5.5vw, 3rem); margin-bottom: 1.25rem; }
+.thesis.hero { font-size: clamp(2rem, 5.5vw, 3rem); margin: 0 0 1.25rem; }
 .standfirst.tight { margin-bottom: 1rem; }
 
 /* the three-number proof */
@@ -76,3 +76,51 @@
 .btn:hover { opacity: .9; }
 .btn:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
 .ctanote { font-size: .8125rem; color: var(--faint); }
+
+/* ── the question carousel ────────────────────────────────────────── */
+.eyebrow {
+  margin: 0 0 1rem; font-size: .6875rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--faint);
+}
+.carousel {
+  margin: 0 0 1.4rem; min-height: 3.4em;
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(1.25rem, 3vw, 1.7rem); line-height: 1.35;
+  font-style: italic; color: var(--soft); display: flex; gap: .1rem;
+}
+.qmark { color: var(--rule); font-size: 1.6em; line-height: .9; margin-right: .15rem; }
+.qtext { color: var(--ink); }
+.caret {
+  display: inline-block; width: 2px; height: 1.05em; margin-left: 2px;
+  background: var(--pine); align-self: center;
+  animation: blink 1.05s steps(1) infinite;
+}
+.caret.still { animation: none; opacity: .35; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .caret { animation: none; } }
+
+/* landing reveals */
+.intro { opacity: 0; transform: translateY(12px);
+         transition: opacity .6s cubic-bezier(.22,.61,.36,1),
+                     transform .6s cubic-bezier(.22,.61,.36,1); }
+.intro.in { opacity: 1; transform: none; }
+
+.pcol { opacity: 0; transform: translateY(10px);
+        transition: opacity .5s ease, transform .5s ease; }
+.pcol.in { opacity: 1; transform: none; }
+.pcol:nth-child(2) { transition-delay: .08s; }
+.pcol:nth-child(3) { transition-delay: .16s; }
+
+.hcell { transition: transform .2s ease; }
+.hcell:hover { transform: translateY(-2px); }
+
+.sbtn { transition: background-color .18s ease, color .18s ease,
+                    border-color .18s ease, transform .12s ease; }
+.sbtn:active { transform: scale(.97); }
+.sblurb { transition: opacity .3s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .intro, .pcol { opacity: 1 !important; transform: none !important;
+                  transition: none !important; }
+  .hcell:hover, .sbtn:active { transform: none; }
+}

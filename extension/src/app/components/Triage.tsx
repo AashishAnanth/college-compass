@@ -1,15 +1,17 @@
 import { TRIAGE_COPY, triage } from '../../engine/narrate';
 import type { CourseResult } from '../../engine/types';
+import { useReveal } from '../hooks/motion';
 
 /** Where the next hour goes. Refuses to rank when ranking would be dishonest. */
 export function Triage({ results }: { results: CourseResult[] }) {
   const report = triage(results, 'A');
+  const { ref, shown } = useReveal<HTMLElement>();
 
   return (
-    <section>
+    <section ref={ref} className={shown ? 'in' : ''}>
       <h2>Where the next hour goes</h2>
       <div className="triage">
-        {report.rows.map((t) => {
+        {report.rows.map((t, i) => {
           const detail =
             t.verdict === 'gone'
               ? `an A is out of reach; the B needs ${(t.result.needed_for('B') ?? 0).toFixed(0)}%`
@@ -17,7 +19,11 @@ export function Triage({ results }: { results: CourseResult[] }) {
               : t.need === null ? 'nothing left to play for'
               : <>needs <b>{t.need.toFixed(0)}%</b> on everything remaining</>;
           return (
-            <div className={`trow ${t.verdict}`} key={t.code}>
+            <div
+              className={`trow ${t.verdict}${shown ? ' in' : ''}`}
+              key={t.code}
+              style={{ transitionDelay: `${i * 55}ms` }}
+            >
               <span className="code">{t.code}</span>
               <span className="verdict">{TRIAGE_COPY[t.verdict]} — {detail}</span>
               <span className="num">

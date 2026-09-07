@@ -29,6 +29,7 @@ export function Demo() {
   const source: Source = useMemo(() => ({
     load: async () => current.dump as unknown as Dump,
     rules: RULES,
+    standalone: false,
     banner: (
       <div className="scenarios">
         <div className="srow" role="tablist" aria-label="Point in the semester">

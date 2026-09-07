@@ -149,17 +149,50 @@ def narrate(result: CourseResult) -> Dict[str, str]:
 
 
 def headline(results) -> Dict[str, str]:
-    """One sentence for the top of the page, across every course."""
+    """One line for the top of the page.
+
+    Answers the question the student actually opened this to ask -- where the
+    effort goes -- rather than reporting on Canvas. Kept in step with the
+    TypeScript version in extension/src/engine/narrate.ts.
+    """
     settled = [r.settled_pct for r in results]
-    worst_gap = 0.0
-    for r in results:
-        cur, fin = r.canvas_says.get("current"), r.canvas_says.get("final")
-        if cur is not None and fin is not None:
-            worst_gap = max(worst_gap, abs(cur - fin))
-    return {
-        "claim": "Nothing is decided yet — and Canvas is already showing you grades.",
-        "detail": ("Across %d courses, the most any one of them has settled is "
-                   "%.1f%%. Canvas is reporting numbers %.0f points apart for the "
-                   "same course on the same day."
-                   % (len(results), max(settled) if settled else 0, worst_gap)),
-    }
+    most = max(settled) if settled else 0.0
+
+    # Before anything is graded there is no advice to give, and pretending
+    # otherwise is the whole failure mode this exists to avoid.
+    if most < 15:
+        groups = [(r.code, g.name, g.weight)
+                  for r in results for g in r.groups if not g.is_bonus]
+        if groups:
+            code, name, weight = max(groups, key=lambda t: t[2])
+            detail = ("The first thing that will move a grade is %s in %s -- %.0f%% "
+                      "of that course. Until then this page has nothing useful to "
+                      "tell you, and says so." % (name.lower(), code, weight))
+        else:
+            detail = "Check back once work starts being graded."
+        return {"claim": "Nothing is decided yet, so nothing needs your evening.",
+                "detail": detail}
+
+    live = [(r, r.needed_for("A")) for r in results]
+    live = [(r, n) for r, n in live if n is not None]
+    gone = [r.code for r, n in live if n > 100]
+    locked = [r.code for r, n in live if n <= 0]
+    in_play = [(r, n) for r, n in live if 0 < n <= 100]
+
+    if in_play:
+        r, need = max(in_play, key=lambda t: t[1])
+        relax = (gone or locked or [None])[0]
+        if relax:
+            detail = ("%s is the one to let go of, and %.0f%% of the term is already "
+                      "decided. The rest is below, ranked by how little room each one "
+                      "leaves you." % (relax, most))
+        else:
+            detail = ("%.0f%% of the term is already decided. The rest is below, "
+                      "ranked by how little room each one leaves you." % most)
+        return {"claim": "%s needs the most from you -- %.0f%% on everything that "
+                         "is left." % (r.code, need),
+                "detail": detail}
+
+    return {"claim": "Every course is settled. Nothing you do now changes these.",
+            "detail": "%.0f%% of the term is decided and no target is still in "
+                      "play." % most}

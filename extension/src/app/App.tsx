@@ -17,6 +17,8 @@ export interface Source {
   rules?: CourseRules[];
   /** Rendered above the courses; the demo puts its scenario switcher here. */
   banner?: React.ReactNode;
+  /** False when the page already has its own masthead, as the demo does. */
+  standalone?: boolean;
 }
 
 const chromeSource: Source = {
@@ -129,6 +131,7 @@ export function App({ source = chromeSource }: { source?: Source }) {
 
   return (
     <div className="wrap">
+      {source.standalone !== false && (
       <header className="mast">
         <svg className="needle" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <circle cx="12" cy="12" r="10.25" stroke="currentColor" strokeWidth="1.1" opacity=".45" />
@@ -144,6 +147,7 @@ export function App({ source = chromeSource }: { source?: Source }) {
           </span>
         )}
       </header>
+      )}
 
       {status.kind === 'loading' && !view && (
         <div className="state">
@@ -163,7 +167,7 @@ export function App({ source = chromeSource }: { source?: Source }) {
       )}
 
       {view && h && (
-        <>
+        <div className="fadein" key={view.term + String(view.at)}>
           <p className="thesis">{h.claim}</p>
           <p className="standfirst">{h.detail}</p>
 
@@ -173,7 +177,9 @@ export function App({ source = chromeSource }: { source?: Source }) {
 
           <section>
             <h2>Your courses</h2>
-            {view.results.map((r) => <CourseCard key={r.code} result={r} />)}
+            {view.results.map((r, i) => (
+              <CourseCard key={r.code} result={r} index={i} />
+            ))}
           </section>
 
           <footer>
@@ -182,7 +188,7 @@ export function App({ source = chromeSource }: { source?: Source }) {
             are. Nothing is stored.
             {view.unknown.length > 0 && ` No rules yet for ${view.unknown.join(', ')}.`}
           </footer>
-        </>
+        </div>
       )}
     </div>
   );

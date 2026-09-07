@@ -1,5 +1,24 @@
-/** What a cold visitor reads before they reach the app. */
+import { QuestionCarousel } from '../app/components/QuestionCarousel';
+import { useCountUp, useReveal } from '../app/hooks/motion';
+
+function Stat({ value, suffix, label, accent = false }: {
+  value: number; suffix: string; label: string; accent?: boolean;
+}) {
+  const { ref, shown } = useReveal<HTMLDivElement>();
+  const n = useCountUp(value, shown, 900);
+  return (
+    <div className={`pcol${accent ? ' accent' : ''}${shown ? ' in' : ''}`} ref={ref}>
+      <span className="pbig">
+        {value % 1 === 0 ? Math.round(n) : n.toFixed(1)}<span className="psub">{suffix}</span>
+      </span>
+      <span className="pnote">{label}</span>
+    </div>
+  );
+}
+
 export function Landing() {
+  const intro = useReveal<HTMLDivElement>('0px');
+
   return (
     <div className="wrap landing">
       <header className="mast">
@@ -14,41 +33,32 @@ export function Landing() {
         </a>
       </header>
 
-      <p className="thesis hero">
-        Canvas told me I had a <em>100%</em> and a <em>6.58%</em> in the same
-        course, on the same day.
-      </p>
+      <div className={`intro${intro.shown ? ' in' : ''}`} ref={intro.ref}>
+        <p className="eyebrow">Every week, the same questions</p>
 
-      <p className="standfirst">
-        Both numbers were real, and neither was my grade. Canvas computes one
-        figure that ignores everything ungraded and another that counts it all as
-        zero. In September the gap between them is the entire course.
-      </p>
+        <QuestionCarousel />
+
+        <p className="thesis hero">
+          Your grade is a plan, not a number.
+        </p>
+
+        <p className="standfirst">
+          Canvas can tell you what you scored. It cannot tell you what to do next —
+          it does not know how your syllabus weights anything, or how many exams
+          are still coming. College Compass reconciles the two and answers the
+          question you actually have: <em>where does tonight go?</em>
+        </p>
+      </div>
 
       <div className="proof">
-        <div className="pcol">
-          <span className="plabel">What Canvas showed</span>
-          <span className="pbig">100%<span className="psub">&thinsp;A</span></span>
-          <span className="pnote">ignores everything ungraded</span>
-        </div>
-        <div className="pcol">
-          <span className="plabel">Also Canvas, same day</span>
-          <span className="pbig">6.58%<span className="psub">&thinsp;F</span></span>
-          <span className="pnote">counts ungraded work as zero</span>
-        </div>
-        <div className="pcol accent">
-          <span className="plabel">Actually decided</span>
-          <span className="pbig">1.8%</span>
-          <span className="pnote">of the course had been graded</span>
-        </div>
+        <Stat value={5} suffix="" label="courses, one evening" />
+        <Stat value={1} suffix="" label="actually needs your evening" accent />
+        <Stat value={38} suffix="%" label="of the term already decided" />
       </div>
 
       <p className="standfirst tight">
-        College Compass reads your real Canvas data, reconciles it against the
-        grading rules in your syllabus, and refuses to show a single number.
-        It shows the range, how much is actually settled, and what you can afford
-        to let up on. Below is the real interface running on sample data — drag
-        the sliders, switch the point in the semester.
+        Below is the real interface, running on sample data. Drag a slider to
+        test a scenario. Move through the semester to watch the advice change.
       </p>
     </div>
   );

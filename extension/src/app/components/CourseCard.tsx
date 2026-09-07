@@ -1,30 +1,37 @@
 import { useEffect, useRef, useState } from 'react';
 import { PILL_LABEL, narrate } from '../../engine/narrate';
 import type { CourseResult } from '../../engine/types';
+import { useCountUp, useReveal } from '../hooks/motion';
 import { Receipt } from './Receipt';
 import { WhatIf } from './WhatIf';
 
-export function CourseCard({ result }: { result: CourseResult }) {
+export function CourseCard({ result, index }: { result: CourseResult; index: number }) {
   const n = narrate(result);
   const [open, setOpen] = useState(false);
+  const { ref, shown } = useReveal<HTMLElement>();
+  const settled = useCountUp(result.settled_pct, shown, 800);
 
-  // Grow the bar after first paint so it animates in.
+  // Grow the bar once the card is actually on screen.
   const fill = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = fill.current;
-    if (!el) return;
+    if (!el || !shown) return;
     const id = requestAnimationFrame(() => {
       el.style.width = `${Math.max(0.6, result.settled_pct).toFixed(3)}%`;
     });
     return () => cancelAnimationFrame(id);
-  }, [result.settled_pct]);
+  }, [result.settled_pct, shown]);
 
   return (
-    <article className="course">
+    <article
+      className={`course${shown ? ' in' : ''}`}
+      ref={ref}
+      style={{ transitionDelay: `${Math.min(index, 5) * 70}ms` }}
+    >
       <div className="meta">
         <span className="code">{result.code}</span>
         <span className={`pill ${n.state}`}>{PILL_LABEL[n.state]}</span>
-        <span className="settled">{result.settled_pct.toFixed(1)}% decided</span>
+        <span className="settled">{settled.toFixed(1)}% decided</span>
       </div>
 
       <p className="claim">{n.claim}</p>

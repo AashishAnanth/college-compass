@@ -27,12 +27,15 @@ export function HowItWorks() {
           </div>
 
           <div className="hcell">
-            <h3>A range, never one number</h3>
+            <h3>Answers, not a dashboard</h3>
             <p>
-              Every course reports a floor, a ceiling, and how much is settled.
-              Where the engine cannot say something useful it says that instead:
-              early in a term the triage view refuses to rank courses at all,
-              because every one of them needs roughly the same thing.
+              Every course gets one sentence you can act on — what you need from
+              here, or that it is already decided. Where the engine cannot say
+              something useful it says that instead: early in a term the triage
+              view refuses to rank courses at all, because every one of them
+              needs roughly the same thing. Canvas&rsquo;s own numbers are shown
+              only as a footnote, since they routinely disagree with themselves
+              by fifty points.
             </p>
           </div>
 

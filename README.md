@@ -1,15 +1,15 @@
 # College Compass
 
-**Canvas told me I had a 100% and a 6.58% in the same course, on the same day.**
+**What do I need on the final to keep my A? Which class can I relax on the most?
+Is this homework even worth doing?**
 
-Both numbers were real. Neither was my grade. Canvas computes one figure that
-ignores everything ungraded and another that counts it all as zero — and in
-September the gap between them is the entire course.
+Every week, the same questions. Canvas can tell you what you scored — it cannot
+tell you what to do next, because it does not know how your syllabus weights
+anything or how many exams are still coming.
 
 College Compass reads your Canvas data through the session you are already
 signed into, reconciles it against the grading rules in your syllabus, and
-refuses to show a single number. It shows the range, how much of the course is
-actually settled, and what you can afford to let up on.
+answers the question you actually have: **where does tonight go?**
 
 **[Live demo →](https://college-compass.vercel.app)**
 
@@ -17,31 +17,27 @@ actually settled, and what you can afford to let up on.
 
 ---
 
-## The problem, measured
+## What it answers
 
-Run against a real Georgia Tech account in week two of the semester:
+- **What do I need from here?** Every course gets one sentence — the average you
+  need on everything remaining to hold your target, or the fact that it is
+  already decided either way.
+- **Which class can I let go of?** A ranking by *slack*: how many points of the
+  remaining course you can throw away and still finish with an A. The course
+  with the most slack is the one to spend less on, which nothing else will tell
+  you.
+- **What if this goes badly?** Drag a slider: *if I average 70% on everything
+  left, where do I land?* Bonus is assumed forfeited, so it is the floor of that
+  scenario rather than the flattering case.
+- **Is any of this even decided yet?** Every course reports how much of it has
+  actually been graded. When that number is too low for advice to mean anything,
+  the app says so instead of inventing a ranking.
 
-| Course | Canvas reported | Actually decided |
-|---|---|---|
-| Systems & Networks | **100% (A)** and **6.58% (F)** | 1.8% |
-| Science of Health | **77.78%** | 4.6% |
-| Algorithms | *no grade at all* | 0% |
-
-The 77.78% is computed from 9 points out of 195 — under 5% of the course.
-It reads like a C+. It means nothing.
-
-## What it does
-
-- **Reconciles two sources.** Canvas knows your scores; the syllabus knows the
-  weights, how many exams are coming, and what the cutoffs are. Neither alone
-  can project a grade.
-- **Reports a range, never one number.** A floor, a ceiling, and how much is
-  settled. When too little is decided to say anything useful, it says that.
-- **What-if.** *If I average 85% on everything left, where do I finish?* Bonus
-  is assumed forfeited, so the answer is the floor of that scenario.
-- **Triage across courses.** Ranked by slack: how many points of the remaining
-  course you can throw away and still hold an A. It refuses to rank when every
-  course needs roughly the same thing, which is most of September.
+Canvas's own numbers appear only as a footnote — useful mostly as a warning.
+Run against a real account in week two, one course reported **100% (an A)** and
+**6.58% (an F)** on the same day, and another showed 77.78% computed from nine
+points out of a hundred and ninety-five. Neither figure was a grade. That is the
+symptom; the missing answers above are the problem.
 
 ## Grading rules it actually models
 

@@ -149,19 +149,57 @@ export function narrate(r: CourseResult): Narration {
   return { state: 'clear', claim: 'Nothing to flag.', because: '' };
 }
 
+/**
+ * One line for the top of the page. It answers the question the student
+ * actually opened this to ask -- where the effort goes -- rather than
+ * reporting on Canvas.
+ */
 export function headline(results: CourseResult[]): { claim: string; detail: string } {
+  const live = results
+    .map((r) => ({ r, need: r.needed_for('A') }))
+    .filter((x) => x.need !== null) as Array<{ r: CourseResult; need: number }>;
+
   const settled = results.map((r) => r.settled_pct);
-  let gap = 0;
-  for (const r of results) {
-    const { current, final } = r.canvas_says;
-    if (current != null && final != null) gap = Math.max(gap, Math.abs(current - final));
-  }
   const most = settled.length ? Math.max(...settled) : 0;
+
+  // Before anything is graded there is no advice to give, and pretending
+  // otherwise is the whole failure mode this exists to avoid.
+  if (most < 15) {
+    const biggest = results
+      .flatMap((r) => r.groups.filter((g) => !g.is_bonus)
+        .map((g) => ({ code: r.code, name: g.name, weight: g.weight })))
+      .sort((a, b) => b.weight - a.weight)[0];
+    return {
+      claim: 'Nothing is decided yet, so nothing needs your evening.',
+      detail: biggest
+        ? `The first thing that will move a grade is ${biggest.name.toLowerCase()} `
+          + `in ${biggest.code} — ${biggest.weight.toFixed(0)}% of that course. `
+          + 'Until then this page has nothing useful to tell you, and says so.'
+        : 'Check back once work starts being graded.',
+    };
+  }
+
+  const gone = live.filter((x) => x.need > 100).map((x) => x.r.code);
+  const locked = live.filter((x) => x.need <= 0).map((x) => x.r.code);
+  const tightest = live.filter((x) => x.need > 0 && x.need <= 100)
+    .sort((a, b) => b.need - a.need)[0];
+
+  if (tightest) {
+    const relax = gone[0] ?? locked[0];
+    return {
+      claim: `${tightest.r.code} needs the most from you — ${tightest.need.toFixed(0)}% `
+           + 'on everything that is left.',
+      detail: relax
+        ? `${relax} is the one to let go of, and ${most.toFixed(0)}% of the term is `
+          + 'already decided. The rest is below, ranked by how little room each one leaves you.'
+        : `${most.toFixed(0)}% of the term is already decided. The rest is below, `
+          + 'ranked by how little room each one leaves you.',
+    };
+  }
+
   return {
-    claim: 'Nothing is decided yet — and Canvas is already showing you grades.',
-    detail: `Across ${results.length} courses, the most any one of them has settled `
-          + `is ${most.toFixed(1)}%. Canvas is reporting numbers ${gap.toFixed(0)} `
-          + 'points apart for the same course on the same day.',
+    claim: 'Every course is settled. Nothing you do now changes these.',
+    detail: `${most.toFixed(0)}% of the term is decided and no target is still in play.`,
   };
 }
 

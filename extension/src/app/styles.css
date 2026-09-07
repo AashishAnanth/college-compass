@@ -250,3 +250,40 @@
            color:var(--faint); }
   .dot { width:5px; height:5px; border-radius:50%; background:var(--faint); }
   .dot.live { background:var(--pine); }
+
+  /* ── motion ───────────────────────────────────────────────────────── */
+  /* Everything below is a reveal, not decoration: content lifts into place
+     once, then stays put. All of it collapses under reduced-motion. */
+  .course, section.in .trow, .fadein {
+    transition: opacity .55s cubic-bezier(.22,.61,.36,1),
+                transform .55s cubic-bezier(.22,.61,.36,1);
+  }
+  .course { opacity: 0; transform: translateY(14px); }
+  .course.in { opacity: 1; transform: none; }
+
+  .trow { opacity: 0; transform: translateY(8px);
+          transition: opacity .45s ease, transform .45s ease,
+                      background-color .18s ease; }
+  .trow.in { opacity: 1; transform: none; }
+  .trow:hover { background: var(--raised); }
+
+  .fadein { animation: fadeup .5s cubic-bezier(.22,.61,.36,1) both; }
+  @keyframes fadeup { from { opacity: 0; transform: translateY(10px); } }
+
+  .settled { font-variant-numeric: tabular-nums; }
+
+  details > summary { transition: color .15s ease; }
+  .course:hover summary { color: var(--ink); }
+
+  .whatif { transition: border-color .2s ease; }
+  .whatif:focus-within { border-color: var(--pine); }
+  .wout .pct, .wout .lt { transition: color .2s ease; }
+
+  input[type=range]::-webkit-slider-thumb { transition: transform .12s ease; }
+  input[type=range]:active::-webkit-slider-thumb { transform: scale(1.18); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .course, .trow, .fadein { opacity: 1 !important; transform: none !important;
+                              animation: none !important; transition: none !important; }
+    .fill { transition: none !important; }
+  }
