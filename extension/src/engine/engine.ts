@@ -13,7 +13,7 @@
  */
 
 import type {
-  CanvasCourse, CourseResult, CourseRules, GroupResult, Item, RawCourse,
+  CanvasCourse, CourseResult, CourseRules, GroupResult, Item, ItemResult, RawCourse,
 } from './types';
 
 const GRADED_STATES = new Set(['graded']);
@@ -102,25 +102,41 @@ function evaluateWeighted(rules: CourseRules, course: CanvasCourse): Base {
     // denominator -- otherwise it looks like work still to come and permanently
     // holds the course below 100% settled.
     const excused = items.filter((i) => i.excused).length;
-    let fracs = scored.map(fractionOf).filter((f): f is number => f !== null)
-                      .sort((a, b) => a - b);
 
-    // Drops apply at the end of term; dropping early flatters the student.
+    // Within a category, weight is distributed by points, not per item: a
+    // 60-point project is worth six times a 10-point one. Averaging the
+    // fractions instead would misreport a course by tens of points.
     const drop = g.drop_lowest ?? 0;
+    let kept = [...scored].sort((a, b) => (fractionOf(a) ?? 0) - (fractionOf(b) ?? 0));
     if (drop && g.expected_count && scored.length >= g.expected_count) {
-      fracs = fracs.slice(drop);
+      kept = kept.slice(drop);
     }
 
+    const scoredPts = kept.reduce((s, i) => s + (i.points_possible ?? 0), 0);
+    const earnedPts = kept.reduce((s, i) => s + (i.score ?? 0), 0);
+
+    // How many points this category will be worth in total. Canvas only creates
+    // assignments as the term goes, so fall back to the ones we can see.
     let nExpected = g.expected_count ?? Math.max(items.length, scored.length);
-    if (nExpected) nExpected = Math.max(scored.length, nExpected - excused);
-    const nCounting = Math.max(1, (nExpected || 1) - drop);
-    const nScored = fracs.length;
+    if (nExpected) nExpected = Math.max(kept.length, nExpected - excused);
+
+    let perItem = g.expected_points_each ?? null;
+    if (perItem == null) {
+      const sizes = items.filter((i) => !i.excused && (i.points_possible ?? 0) > 0)
+                         .map((i) => i.points_possible as number);
+      perItem = sizes.length ? sizes.reduce((a, b) => a + b, 0) / sizes.length : null;
+    }
+    let expectedPts = (nExpected && perItem != null)
+      ? perItem * Math.max(0, nExpected - drop)
+      : items.filter((i) => !i.excused)
+             .reduce((s, i) => s + (i.points_possible ?? 0), 0);
+    expectedPts = Math.max(expectedPts, scoredPts);
 
     let frac: number | null = null;
     let settledW = 0;
-    if (nScored > 0) {
-      frac = fracs.reduce((a, b) => a + b, 0) / nScored;
-      settledW = g.weight * Math.min(1, nScored / nCounting);
+    if (scoredPts > 0) {
+      frac = earnedPts / scoredPts;
+      settledW = g.weight * Math.min(1, scoredPts / expectedPts);
     }
     const remainingW = Math.max(0, g.weight - settledW);
 
@@ -133,11 +149,20 @@ function evaluateWeighted(rules: CourseRules, course: CanvasCourse): Base {
       ceilingExtra += remainingW;
     }
 
+    // Each item's share of the final grade: its points as a fraction of the
+    // category, times the category's weight.
+    const itemResults: ItemResult[] = items.map((i) => ({
+      name: i.name, group: g.name, points: i.points_possible,
+      weight: i.excused || expectedPts <= 0
+        ? 0 : (i.points_possible ?? 0) / expectedPts * g.weight,
+      due_at: i.due_at, score: i.score, is_scored: isScored(i), state: i.state,
+    }));
+
     groups.push({
       name: g.name, weight: g.weight, is_bonus: Boolean(g.is_bonus),
-      scored_count: nScored, expected_count: g.expected_count ?? null,
+      scored_count: kept.length, expected_count: g.expected_count ?? null,
       earned_fraction: frac, settled_weight: settledW,
-      remaining_weight: remainingW, note: g.note ?? '',
+      remaining_weight: remainingW, note: g.note ?? '', items: itemResults,
     });
 
     if (g.expected_count && items.length < g.expected_count) {
@@ -201,6 +226,11 @@ function evaluatePoints(rules: CourseRules, course: CanvasCourse): Base {
       settled_weight: ppScored / total * 100,
       remaining_weight: (ppAll - ppScored) / total * 100,
       note: g.note ?? '',
+      items: items.map((i) => ({
+        name: i.name, group: g.name, points: i.points_possible,
+        weight: i.excused ? 0 : (i.points_possible ?? 0) / total * 100,
+        due_at: i.due_at, score: i.score, is_scored: isScored(i), state: i.state,
+      })),
     };
   });
 
@@ -278,6 +308,18 @@ export function evaluate(rules: CourseRules, raw: RawCourse | CanvasCourse): Cou
     slack_for: (letter: string) => {
       const need = needed_for(letter);
       return need === null ? null : (100 - need) / 100 * (100 - settled_pct);
+    },
+    get upcoming() {
+      return base.groups.flatMap((g) => g.items).filter((i) => !i.is_scored)
+        .sort((a, b) => b.weight - a.weight);
+    },
+    needed_on(item: ItemResult, restRate?: number, letter = 'A') {
+      const cutoff = rules.letter_cutoffs[letter];
+      if (cutoff === undefined || item.weight <= 0) return null;
+      const target = rules.rounding === 'nearest_int' ? cutoff - 0.5 : cutoff;
+      const pace = restRate ?? (settled_pct > 0 ? earned_pct / settled_pct : 0.9);
+      const other = Math.max(0, (100 - settled_pct) - item.weight);
+      return (target - earned_pct - other * pace) / item.weight * 100;
     },
   };
 }

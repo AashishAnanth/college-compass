@@ -104,7 +104,25 @@ r8 = evaluate(CourseRules("T", groups=[Group("E", 100.0, canvas_group_ids=[1])])
               course([], weights_applied=False))
 check("warning raised", any("weighting switched off" in w for w in r8.warnings), True)
 
-print("\n[11] projection at 100% must reach the ceiling, including unlisted work")
+print("\n[11] a category weights by points, not per assignment")
+# Canvas scores a group as sum(earned)/sum(possible). Averaging the fractions
+# instead reports a course tens of points wrong when items differ in size.
+rw3 = CourseRules("T", groups=[Group("Projects", 100.0, expected_count=3,
+                                     canvas_group_ids=[1])])
+r11 = evaluate(rw3, course([item(1, 10, 10), item(1, 30, 30), item(1, 60, 0)]))
+check("aced 10 and 30, bombed 60 -> 40%", r11.earned_pct, 40.0)
+check("group fraction is points-weighted", r11.groups[0].earned_fraction, 0.4)
+r11b = evaluate(rw3, course([item(1, 10, 0), item(1, 30, 0), item(1, 60, 60)]))
+check("mirror image -> 60%", r11b.earned_pct, 60.0)
+
+print("\n[12] a half-finished category settles by points, not by count")
+rw4 = CourseRules("T", groups=[Group("Exams", 100.0, expected_count=2,
+                                     expected_points_each=100, canvas_group_ids=[1])])
+r12 = evaluate(rw4, course([item(1, 100, 90)]))
+check("one of two exams scored", r12.settled_pct, 50.0)
+check("earned", r12.earned_pct, 45.0)
+
+print("\n[13] projection at 100% must reach the ceiling, including unlisted work")
 from engine.grade import project
 rp2 = CourseRules("P", scheme="points", total_points=195.0,
                   groups=[Group("All", canvas_group_ids=[1])])

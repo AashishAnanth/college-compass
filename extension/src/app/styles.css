@@ -287,3 +287,43 @@
                               animation: none !important; transition: none !important; }
     .fill { transition: none !important; }
   }
+
+  /* ── what's left ──────────────────────────────────────────────────── */
+  .left { margin-top: 1.25rem; }
+  .lhead, .lrow {
+    display: grid; grid-template-columns: 1fr 4.5rem 11rem; gap: 1rem;
+    align-items: baseline; padding: .5rem 0;
+  }
+  .lhead {
+    font-size: .6875rem; letter-spacing: .07em; text-transform: uppercase;
+    color: var(--faint); border-bottom: 1px solid var(--rule); padding-bottom: .45rem;
+  }
+  .lhead span:nth-child(2), .lhead span:nth-child(3) { text-align: right; }
+  .lrow { border-bottom: 1px solid var(--rule); transition: background-color .15s ease; }
+  .lrow:last-of-type { border-bottom: none; }
+  .lrow:hover { background: var(--raised); }
+  .lname { font-size: .9375rem; }
+  .ldue {
+    font-family: 'IBM Plex Mono', monospace; font-style: normal;
+    font-size: .6875rem; color: var(--faint); margin-left: .55rem;
+  }
+  .lwt, .lneed {
+    font-family: 'IBM Plex Mono', monospace; font-size: .8125rem;
+    font-variant-numeric: tabular-nums; text-align: right; color: var(--soft);
+  }
+  .lneed.hard { color: var(--amber); }
+  .lneed.free { color: var(--pine); }
+  .lneed.over { color: var(--faint); }
+  .lmore {
+    font: inherit; font-size: .8125rem; color: var(--pine); background: none;
+    border: none; padding: .6rem 0 0; cursor: pointer; text-align: left;
+  }
+  .lmore:hover { text-decoration: underline; }
+  .lmore:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
+  .lnote { margin: .9rem 0 0; font-size: .78125rem; color: var(--faint); line-height: 1.6; }
+  .lnote em { font-style: normal; color: var(--pine); }
+  @media (max-width: 34rem) {
+    .lhead, .lrow { grid-template-columns: 1fr 3.5rem; }
+    .lhead span:nth-child(3) { display: none; }
+    .lneed { grid-column: 2 / 3; text-align: right; }
+  }

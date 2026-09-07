@@ -4,6 +4,7 @@ import type { CourseResult } from '../../engine/types';
 import { useCountUp, useReveal } from '../hooks/motion';
 import { Receipt } from './Receipt';
 import { WhatIf } from './WhatIf';
+import { WhatsLeft } from './WhatsLeft';
 
 export function CourseCard({ result, index }: { result: CourseResult; index: number }) {
   const n = narrate(result);
@@ -47,6 +48,8 @@ export function CourseCard({ result, index }: { result: CourseResult; index: num
         If it all goes perfectly, <b>{result.ceiling.toFixed(0)}%</b>. That gap is how
         little is settled.
       </p>
+
+      <WhatsLeft result={result} />
 
       <WhatIf result={result} />
 

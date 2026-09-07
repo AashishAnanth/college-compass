@@ -16,6 +16,9 @@ export interface Group {
    * Without this, projection is fiction.
    */
   expected_count?: number | null;
+  /** Points each item is worth, when the syllabus says and Canvas has not
+   *  created them yet. Falls back to the average of what we can see. */
+  expected_points_each?: number | null;
   drop_lowest?: number;
   canvas_group_ids: number[];
   /** True only when it can raise the grade and never lower it. */
@@ -87,6 +90,19 @@ export interface Dump {
   error?: string;
 }
 
+/** One assignment, with the only number that matters: what it is worth. */
+export interface ItemResult {
+  name: string;
+  group: string;
+  points: number | null;
+  /** Share of the final grade, 0..100. */
+  weight: number;
+  due_at: string | null;
+  score: number | null;
+  is_scored: boolean;
+  state: string;
+}
+
 export interface GroupResult {
   name: string;
   weight: number;
@@ -98,6 +114,7 @@ export interface GroupResult {
   settled_weight: number;
   remaining_weight: number;
   note: string;
+  items: ItemResult[];
 }
 
 export interface CourseResult {
@@ -128,6 +145,11 @@ export interface CourseResult {
   needed_for(letter: string): number | null;
   /** Points of remaining course you can throw away and keep `letter`. */
   slack_for(letter: string): number | null;
+  /** Everything still to play for, biggest first. */
+  upcoming: ItemResult[];
+  /** What you need on one assignment to finish at `letter`, assuming the rest
+   *  of the course goes at `restRate` (default: your current pace). */
+  needed_on(item: ItemResult, restRate?: number, letter?: string): number | null;
 }
 
 export type NarrationState = 'wrong' | 'noise' | 'watch' | 'clear' | 'guess';

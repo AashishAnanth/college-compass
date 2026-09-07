@@ -19,9 +19,16 @@ answers the question you actually have: **where does tonight go?**
 
 ## What it answers
 
-- **What do I need from here?** Every course gets one sentence — the average you
-  need on everything remaining to hold your target, or the fact that it is
-  already decided either way.
+- **What do I need on the final?** Not a category average — the actual number,
+  on the actual assignment. Every remaining item is listed with its real share
+  of your final grade and the score you need on it. *Final Exam, 20.0% of your
+  grade, need 88%.*
+- **Is this homework even worth doing?** Some items come back marked *skip it,
+  you're still fine* — they can score zero without costing you the grade. A
+  2.1% homework and a 20% final are not the same task, and nothing else tells
+  you which is which.
+- **What do I need overall?** One sentence per course: the average you need on
+  everything remaining, or the fact that it is already decided either way.
 - **Which class can I let go of?** A ranking by *slack*: how many points of the
   remaining course you can throw away and still finish with an A. The course
   with the most slack is the one to spend less on, which nothing else will tell
@@ -45,6 +52,7 @@ Real syllabi break every assumption a normal grade calculator makes:
 
 | Rule | Example |
 |---|---|
+| Points, not per-assignment averages | A 60-point project counts six times a 10-point one. Averaging the fractions instead misreports a course by 27 points |
 | Bonus that cannot hurt you | Pop quizzes worth +3%, capped at 103% |
 | Raw points, not percentages | 500-point course where the A starts at 450 |
 | Score multipliers | Project grade is `max(raw, 25%) × demo score` |

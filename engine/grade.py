@@ -23,6 +23,19 @@ from .model import CourseRules, Group
 
 
 @dataclass
+class ItemResult:
+    """One assignment, with the only number that matters: what it is worth."""
+    name: str
+    group: str
+    points: Optional[float]
+    weight: float                    # share of the final grade, 0..100
+    due_at: Optional[str]
+    score: Optional[float]
+    is_scored: bool
+    state: str
+
+
+@dataclass
 class GroupResult:
     name: str
     weight: float
@@ -33,6 +46,7 @@ class GroupResult:
     settled_weight: float                 # weight already decided
     remaining_weight: float               # weight still to play for
     note: str = ""
+    items: List[ItemResult] = field(default_factory=list)
 
 
 @dataclass
@@ -53,6 +67,28 @@ class CourseResult:
     groups: List[GroupResult] = field(default_factory=list)
     canvas_says: Dict[str, Optional[float]] = field(default_factory=dict)
     warnings: List[str] = field(default_factory=list)
+
+    @property
+    def upcoming(self) -> List[ItemResult]:
+        """Everything still to play for, biggest first. This is what answers
+        "what do I need on the final" -- you cannot say it without knowing what
+        the final is actually worth."""
+        out = [i for g in self.groups for i in g.items if not i.is_scored]
+        return sorted(out, key=lambda i: -i.weight)
+
+    def needed_on(self, item: "ItemResult",
+                  rest_rate: Optional[float] = None,
+                  letter: str = "A") -> Optional[float]:
+        """What you need on one assignment to finish at `letter`, assuming the
+        rest of the course goes at `rest_rate` (default: your current pace)."""
+        cutoff = self.rules.cutoff_for(letter)
+        if cutoff is None or item.weight <= 0:
+            return None
+        target = cutoff - 0.5 if self.rules.rounding == "nearest_int" else cutoff
+        if rest_rate is None:
+            rest_rate = (self.earned_pct / self.settled_pct) if self.settled_pct > 0 else 0.9
+        other = max(0.0, (100.0 - self.settled_pct) - item.weight)
+        return (target - self.earned_pct - other * rest_rate) / item.weight * 100.0
 
     @property
     def is_decided(self) -> bool:
@@ -139,26 +175,41 @@ def _weighted(rules: CourseRules, course: CanvasCourse) -> CourseResult:
         # permanently holds the course below 100% settled.
         excused = sum(1 for i in items if i.excused)
 
-        # Drop rules apply at the end of term; applying them to a partial set
-        # would flatter the student, so only drop once the set is complete.
-        fracs = sorted(i.fraction for i in scored)
+        # Within a category, weight is distributed by points, not per item:
+        # a 60-point project is worth six times a 10-point one. Averaging the
+        # fractions instead would misreport a course by tens of points.
+        kept = sorted(scored, key=lambda i: i.fraction)
         if g.drop_lowest and g.expected_count and len(scored) >= g.expected_count:
-            fracs = fracs[g.drop_lowest:]
+            kept = kept[g.drop_lowest:]
 
+        scored_pts = sum(i.points_possible for i in kept)
+        earned_pts = sum(i.score for i in kept)
+
+        # How many points this category will be worth in total. Canvas only
+        # creates assignments as the term goes, so fall back to the size of the
+        # ones we can see.
         n_expected = g.expected_count or max(len(items), len(scored))
         if n_expected:
-            n_expected = max(len(scored), n_expected - excused)
-        n_counting = max(1, (n_expected - g.drop_lowest)) if n_expected else 1
-        n_scored = len(fracs)
+            n_expected = max(len(kept), n_expected - excused)
+        per_item = g.expected_points_each
+        if per_item is None:
+            sizes = [i.points_possible for i in items
+                     if not i.excused and (i.points_possible or 0) > 0]
+            per_item = (sum(sizes) / len(sizes)) if sizes else None
+        if n_expected and per_item:
+            expected_pts = per_item * max(0, n_expected - g.drop_lowest)
+        else:
+            expected_pts = sum(i.points_possible or 0 for i in items if not i.excused)
+        expected_pts = max(expected_pts, scored_pts)
 
-        if n_scored == 0:
+        if scored_pts > 0:
+            frac = earned_pts / scored_pts
+            settled_w = g.weight * min(1.0, scored_pts / expected_pts)
+        else:
             frac = None
             settled_w = 0.0
-        else:
-            frac = sum(fracs) / n_scored
-            # Each piece of work carries an equal slice of its group's weight.
-            settled_w = g.weight * min(1.0, n_scored / float(n_counting))
 
+        n_scored = len(kept)
         remaining_w = max(0.0, g.weight - settled_w)
 
         if g.is_bonus:
@@ -173,11 +224,22 @@ def _weighted(rules: CourseRules, course: CanvasCourse) -> CourseResult:
                 earned += settled_w * frac
             ceiling_extra += remaining_w
 
+        # Each item's share of the final grade: its points as a fraction of the
+        # category, times the category's weight.
+        item_results = []
+        for i in items:
+            share = ((i.points_possible or 0) / expected_pts * g.weight
+                     if expected_pts > 0 else 0.0)
+            item_results.append(ItemResult(
+                name=i.name, group=g.name, points=i.points_possible,
+                weight=0.0 if i.excused else share, due_at=i.due_at,
+                score=i.score, is_scored=i.is_scored, state=i.state))
+
         results.append(GroupResult(
             name=g.name, weight=g.weight, is_bonus=g.is_bonus,
             scored_count=n_scored, expected_count=g.expected_count,
             earned_fraction=frac, settled_weight=settled_w,
-            remaining_weight=remaining_w, note=g.note,
+            remaining_weight=remaining_w, note=g.note, items=item_results,
         ))
 
         if g.expected_count and len(items) < g.expected_count:
@@ -244,6 +306,14 @@ def _points(rules: CourseRules, course: CanvasCourse) -> CourseResult:
         pp_all = sum(i.points_possible or 0 for i in items)
         frac = (sum(i.score for i in scored) /
                 sum(i.points_possible for i in scored)) if scored else None
+        item_results = [
+            ItemResult(name=i.name, group=g.name, points=i.points_possible,
+                       weight=(0.0 if i.excused
+                               else (i.points_possible or 0) / total * 100.0),
+                       due_at=i.due_at, score=i.score, is_scored=i.is_scored,
+                       state=i.state)
+            for i in items
+        ]
         groups.append(GroupResult(
             name=g.name,
             weight=pp_all / total * 100.0,
@@ -253,7 +323,7 @@ def _points(rules: CourseRules, course: CanvasCourse) -> CourseResult:
             earned_fraction=frac,
             settled_weight=sum(i.points_possible for i in scored) / total * 100.0,
             remaining_weight=(pp_all - sum(i.points_possible for i in scored)) / total * 100.0,
-            note=g.note,
+            note=g.note, items=item_results,
         ))
 
     warns = []
